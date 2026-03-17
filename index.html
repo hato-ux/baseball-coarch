@@ -2,15 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="description" content="野球選手のための科学的指導マニュアル。筋肉・解剖学・栄養・メンタルまで網羅した高校野球コーチングアプリ。">
-<meta name="theme-color" content="#0a0e1a">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="COACH PRO">
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="manifest" href="/manifest.json">
-<title>BASEBALL COACH PRO | 野球指導マニュアル</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>野球指導マニュアル v2 | BASEBALL COACH PRO</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -50,7 +43,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.97);backdrop
 .hero p{color:var(--gray);font-size:13px;line-height:1.85;max-width:580px;}
 
 /* SECTIONS */
-.section{background:var(--navy2);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:26px;margin-bottom:18px;position:relative;overflow:hidden;}
+.section{background:var(--navy2);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:26px;margin-bottom:18px;position:relative;overflow:hidden;} .section .data-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;}
 .section-accent{position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;}
 .acc-gold{background:var(--gold);}
 .acc-blue{background:var(--blue);}
@@ -193,16 +186,16 @@ header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.97);backdrop
 .hy-dot.filled{opacity:1;}
 
 /* INFO BOX */
-.info-box{border-radius:8px;padding:13px 15px;margin:12px 0;}
-.ib-gold{background:rgba(245,166,35,0.07);border:1px solid rgba(245,166,35,0.22);}
-.ib-green{background:rgba(6,214,160,0.07);border:1px solid rgba(6,214,160,0.22);}
-.ib-red{background:rgba(230,57,70,0.07);border:1px solid rgba(230,57,70,0.22);}
-.ib-blue{background:rgba(58,134,255,0.07);border:1px solid rgba(58,134,255,0.22);}
+.info-box{border-radius:8px;padding:14px 16px;margin:12px 0;}.info-box p{color:#d0dae8;font-size:12px;line-height:1.85;margin:6px 0 0;}
+.ib-gold{background:rgba(245,166,35,0.14);border:1px solid rgba(245,166,35,0.45);}
+.ib-green{background:rgba(6,214,160,0.13);border:1px solid rgba(6,214,160,0.45);}
+.ib-red{background:rgba(230,57,70,0.14);border:1px solid rgba(230,57,70,0.45);}
+.ib-blue{background:rgba(58,134,255,0.14);border:1px solid rgba(58,134,255,0.45);}
 .ib-title{font-size:11px;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:5px;}
-.ib-gold .ib-title{color:var(--gold);}
-.ib-green .ib-title{color:var(--green);}
-.ib-red .ib-title{color:var(--red);}
-.ib-blue .ib-title{color:var(--blue);}
+.ib-gold .ib-title{color:#ffc14d;font-weight:700;}
+.ib-green .ib-title{color:#2fffc8;font-weight:700;}
+.ib-red .ib-title{color:#ff6b77;font-weight:700;}
+.ib-blue .ib-title{color:#7ab8ff;font-weight:700;}
 .info-box p{font-size:12px;color:#b0bbc8;line-height:1.85;margin:0;}
 
 /* TABLE */
@@ -791,32 +784,15 @@ header{
 .snav-btn.blue-active{background:rgba(41,121,255,0.15);border-color:rgba(41,121,255,0.4);color:#6fa8ff;}
 .snav-btn.orange-active{background:rgba(255,112,67,0.15);border-color:rgba(255,112,67,0.4);color:#ffaa80;}
 
-
-/* ===== MOBILE OPTIMIZATIONS ===== */
-@media(max-width:480px){
-  header{padding:0 12px;}
-  .tab-bar{padding:10px 12px;}
-  .tab-btn{padding:6px 12px;font-size:11px;}
-  .content{padding:20px 14px 80px;}
-  .hero{padding:28px 20px;}
-  .hero h1{font-size:26px;}
-  .hero-num{font-size:70px;}
-  .section{padding:20px 16px;}
-  .std-grid{grid-template-columns:1fr 1fr;}
-  .meal-plan{grid-template-columns:1fr 1fr;}
-  .data-table{font-size:11px;}
-  .data-table th,.data-table td{padding:7px 10px;}
-  .kinetic-chain{gap:0;}
-  .kc-circle{width:44px;height:44px;font-size:8px;}
+@media(max-width:420px){
+  .hero h1{font-size:20px !important;}
+  .meal-plan{grid-template-columns:1fr !important;}
+  .std-card{padding:12px;}
+  .section{padding:14px 12px;}
+  .content{padding:12px 10px 80px;}
+  .tab-btn{padding:5px 9px;font-size:10px;}
+  .mdict-ex-grid{grid-template-columns:1fr !important;}
 }
-@media(max-width:360px){
-  .std-grid{grid-template-columns:1fr;}
-  .meal-plan{grid-template-columns:1fr;}
-  .hero h1{font-size:22px;}
-}
-/* Tab bar scroll indicator */
-.tab-bar{-webkit-overflow-scrolling:touch;}
-.tab-bar::-webkit-scrollbar{display:none;}
 </style>
 </head>
 <body>
@@ -828,6 +804,7 @@ header{
 
 <div class="tab-bar">
   <button class="tab-btn active" onclick="switchPage('anatomy',this)">🦴 筋肉・解剖学</button>
+  <button class="tab-btn" onclick="switchPage('muscdict',this)">💪 筋肉図鑑</button>
   <button class="tab-btn" onclick="switchPage('bodymap',this)">🗺️ 人体マップ</button>
   <button class="tab-btn" onclick="switchPage('joints',this)">🔗 関節の動き</button>
   <button class="tab-btn" onclick="switchPage('trunk',this)">🔩 体幹解剖</button>
@@ -853,7 +830,7 @@ header{
     <button class="anat-sub-btn" onclick="switchAnatSub('structure',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">🔬 筋肉の構造</button>
     <button class="anat-sub-btn" onclick="switchAnatSub('hypertrophy',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">📈 筋肥大の科学</button>
     <button class="anat-sub-btn" onclick="switchAnatSub('energy',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">🔋 エネルギー代謝</button>
-    <button class="anat-sub-btn" onclick="switchAnatSub('muscles',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">💪 筋肉図鑑</button>
+    <button class="anat-sub-btn" onclick="switchPage('muscdict',document.querySelector('[onclick*=muscdict]'))" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">💪 筋肉図鑑→</button>
   </div>
 
   <div class="content" style="padding-top:0;">
@@ -1453,6 +1430,274 @@ header{
         </tbody>
       </table>
 
+    <!-- ======================================================== -->
+    <!-- 前鋸筋 深掘りセクション -->
+    <!-- ======================================================== -->
+    <div class="section">
+      <div class="section-accent acc-blue"></div>
+      <h2 class="sh-blue">🔍 前鋸筋（ぜんきょきん）完全解剖</h2>
+      <div class="section-sub">野球選手が最も見落としがちで、最も重要な筋肉のひとつ</div>
+
+      <!-- SVG: 前鋸筋の位置と形 -->
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-top:14px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex-shrink:0;text-align:center;">
+          <div style="font-size:10px;font-weight:700;color:#6fa8ff;margin-bottom:8px;letter-spacing:0.5px;">前鋸筋の位置（前面・側面）</div>
+          <svg width="200" height="240" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+            <!-- 体幹アウトライン（前面） -->
+            <path d="M60,20 Q100,15 140,20 L148,80 Q145,130 130,160 Q115,185 100,195 Q85,185 70,160 Q55,130 52,80 Z" fill="#1c2540" stroke="#2d3a5a" stroke-width="1.5"/>
+            <!-- 鎖骨 -->
+            <path d="M65,32 Q100,28 135,32" fill="none" stroke="#3d4f6e" stroke-width="2"/>
+            <!-- 胸骨 -->
+            <line x1="100" y1="32" x2="100" y2="140" stroke="#3d4f6e" stroke-width="2"/>
+            <!-- 肋骨（右側 = 左に表示） -->
+            <path d="M100,50 Q80,52 68,62" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,65 Q78,68 66,78" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,80 Q76,84 64,95" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,95 Q75,100 63,112" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,110 Q76,116 64,128" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,125 Q78,132 66,144" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <!-- 肋骨（左側） -->
+            <path d="M100,50 Q120,52 132,62" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,65 Q122,68 134,78" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,80 Q124,84 136,95" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,95 Q125,100 137,112" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <path d="M100,110 Q124,116 136,128" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+            <!-- 前鋸筋（左側 = 右に表示 ハイライト） -->
+            <path d="M132,62 Q148,65 152,72 Q145,68 136,72" fill="rgba(58,134,255,0.15)" stroke="none"/>
+            <path d="M134,78 Q152,82 155,90 Q147,86 136,88" fill="rgba(58,134,255,0.18)" stroke="none"/>
+            <path d="M136,95 Q155,100 157,108 Q149,104 138,105" fill="rgba(58,134,255,0.22)" stroke="none"/>
+            <path d="M137,112 Q155,118 156,126 Q148,122 138,122" fill="rgba(58,134,255,0.25)" stroke="none"/>
+            <path d="M136,128 Q153,134 152,142 Q144,138 136,136" fill="rgba(58,134,255,0.28)" stroke="none"/>
+            <!-- 前鋸筋の輪郭ライン（鋸歯状） -->
+            <path d="M130,60 Q148,64 153,72 Q151,78 148,82 Q152,88 155,92 Q153,98 150,102 Q154,108 156,114 Q153,120 150,124 Q153,130 154,138 Q148,145 140,148 Q138,138 136,130 Q138,122 137,114 Q138,104 136,95 Q137,87 134,78 Q132,69 130,60Z" fill="rgba(58,134,255,0.2)" stroke="#6fa8ff" stroke-width="1.5"/>
+            <!-- 停止（肩甲骨内側縁） -->
+            <path d="M140,65 Q145,90 143,130 Q141,148 140,155" fill="none" stroke="#6fa8ff" stroke-width="2" stroke-dasharray="4,2"/>
+            <circle cx="140" cy="155" r="4" fill="rgba(58,134,255,0.5)" stroke="#6fa8ff" stroke-width="1.5"/>
+            <!-- 起始ラベル -->
+            <line x1="155" y1="95" x2="178" y2="85" stroke="#6fa8ff" stroke-width="1" stroke-dasharray="2,2"/>
+            <text x="180" y="82" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">起始:</text>
+            <text x="180" y="92" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">第1〜9肋骨</text>
+            <!-- 停止ラベル -->
+            <line x1="140" y1="155" x2="165" y2="165" stroke="#6fa8ff" stroke-width="1" stroke-dasharray="2,2"/>
+            <text x="167" y="162" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">停止:</text>
+            <text x="167" y="172" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">肩甲骨内側縁</text>
+            <text x="167" y="182" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">（前面）</text>
+            <!-- ウィングスキャプラ 矢印 -->
+            <path d="M58,110 Q48,105 44,115 Q48,125 55,118" fill="none" stroke="rgba(230,57,70,0.6)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="12" y="104" fill="rgba(230,57,70,0.8)" font-size="8" font-family="Noto Sans JP,sans-serif">弱いと</text>
+            <text x="12" y="114" fill="rgba(230,57,70,0.8)" font-size="8" font-family="Noto Sans JP,sans-serif">翼状に</text>
+            <text x="12" y="124" fill="rgba(230,57,70,0.8)" font-size="8" font-family="Noto Sans JP,sans-serif">浮く↑</text>
+            <!-- 名称 -->
+            <text x="100" y="218" text-anchor="middle" fill="#6fa8ff" font-size="10" font-weight="700" font-family="Noto Sans JP,sans-serif">前鋸筋（青色部分）</text>
+            <text x="100" y="230" text-anchor="middle" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">肋骨側面〜肩甲骨内側縁（前面）</text>
+          </svg>
+        </div>
+
+        <!-- 基本情報 -->
+        <div style="flex:1;min-width:240px;">
+          <table class="data-table">
+            <tbody>
+              <tr><td style="width:80px;font-weight:700;color:var(--gray);font-size:11px;">別名</td><td>Serratus Anterior（セレーター・アンテリア）鋸の歯のような形が名前の由来</td></tr>
+              <tr><td style="font-weight:700;color:var(--gray);font-size:11px;">起始</td><td>第1〜9肋骨の外側面（肋骨ごとに指状に分かれる）</td></tr>
+              <tr><td style="font-weight:700;color:var(--gray);font-size:11px;">停止</td><td>肩甲骨内側縁（前面＝胸壁側）、下角（特に重要）</td></tr>
+              <tr><td style="font-weight:700;color:var(--gray);font-size:11px;">神経支配</td><td>長胸神経（C5・C6・C7）— 損傷で麻痺しやすい末梢神経</td></tr>
+              <tr><td style="font-weight:700;color:var(--gray);font-size:11px;">血液供給</td><td>外側胸動脈・胸背動脈</td></tr>
+              <tr><td style="font-weight:700;color:var(--gray);font-size:11px;">筋繊維方向</td><td>前外側〜後内側（肋骨から肩甲骨に向かって走行）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 機能と役割 -->
+      <h3 style="margin-top:20px;">前鋸筋の4つの機能</h3>
+      <div class="std-grid">
+        <div class="std-card" style="border-color:rgba(58,134,255,0.3);">
+          <div class="std-label" style="color:#6fa8ff;">① 肩甲骨外転・前傾</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">肩甲骨を背骨から離して前外側に引き出す（プッシュアップで腕を伸ばしきった時の動作）。<strong style="color:var(--white);">肩甲骨を胸壁に密着させる「唯一の筋肉」</strong>。この機能がないと肩甲骨が背中から浮き上がる（翼状肩甲＝ウィングスキャプラ）。</div>
+        </div>
+        <div class="std-card" style="border-color:rgba(0,200,150,0.3);">
+          <div class="std-label" style="color:var(--green);">② 肩甲骨上方回旋（最重要）</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">下角を前外側に引くことで肩甲骨を上方に回旋させる。腕を耳の高さより上に上げるために<strong style="color:var(--white);">絶対に必要な動作</strong>。前鋸筋（下部）＋僧帽筋上部・下部の「力のカップル（force couple）」で実現する。</div>
+        </div>
+        <div class="std-card" style="border-color:rgba(245,166,35,0.3);">
+          <div class="std-label" style="color:var(--gold);">③ 肩甲骨の安定化</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">投球・打撃・プッシュアップなどの押し出し動作で、肩甲骨が動揺しないよう固定する。<strong style="color:var(--white);">前鋸筋が弱いと肩甲骨が「土台」にならず、腕の力が体幹に伝達されない。</strong>ローテーターカフへの過負荷もここから始まる。</div>
+        </div>
+        <div class="std-card" style="border-color:rgba(168,85,247,0.3);">
+          <div class="std-label" style="color:#c49aff;">④ 呼吸補助筋</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">深呼吸時に肋骨を引き上げて胸郭を広げる補助をする。長時間投球後の疲労でこの機能が低下すると、呼吸浅くなりパフォーマンス低下にもつながる。</div>
+        </div>
+      </div>
+
+      <!-- 野球との直接的関係 -->
+      <div class="section" style="margin-top:16px;padding:20px;background:rgba(58,134,255,0.06);border:1px solid rgba(58,134,255,0.2);border-radius:12px;">
+        <div class="section-accent acc-blue"></div>
+        <h3 style="color:#6fa8ff;margin-top:0;">⚾ 投球・打撃での前鋸筋の役割</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--white);margin-bottom:8px;">投球における前鋸筋</div>
+            <div class="phase-timeline" style="padding-left:20px;">
+              <div class="pt-step blue"><div class="pt-dot" style="border-color:var(--blue);left:-15px;width:12px;height:12px;"><div class="pt-dot-inner" style="background:var(--blue);width:5px;height:5px;"></div></div>
+                <div class="pt-content" style="padding:8px 10px;"><div class="pt-title" style="font-size:12px;">コッキング期</div><div class="pt-desc" style="font-size:11px;">腕が後方に引かれる時、肩甲骨が安定していないと腕の引きがぐらつく。前鋸筋が肩甲骨を胸壁に固定することでコッキングの土台を作る。</div></div>
+              </div>
+              <div class="pt-step green"><div class="pt-dot" style="border-color:var(--green);left:-15px;width:12px;height:12px;"><div class="pt-dot-inner" style="background:var(--green);width:5px;height:5px;"></div></div>
+                <div class="pt-content" style="padding:8px 10px;"><div class="pt-title" style="font-size:12px;">アクセラレーション期</div><div class="pt-desc" style="font-size:11px;">肩甲骨が前傾・外転しながら腕の前進をサポート。前鋸筋が作る「プロトラクション（前方への引き出し）」が腕のスピードをさらに加速させる。</div></div>
+              </div>
+              <div class="pt-step red"><div class="pt-dot" style="border-color:var(--red);left:-15px;width:12px;height:12px;"><div class="pt-dot-inner" style="background:var(--red);width:5px;height:5px;"></div></div>
+                <div class="pt-content" style="padding:8px 10px;"><div class="pt-title" style="font-size:12px;">フォロースルー期</div><div class="pt-desc" style="font-size:11px;"><strong style="color:var(--red);">前鋸筋が弱いと肩峰下でインピンジメントが起きやすい</strong>。上方回旋不足→腱板が肩峰に衝突→腱板炎。投手の肩障害の根本原因がここにある。</div></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--white);margin-bottom:8px;">弱化した場合のドミノ倒し</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.25);border-radius:8px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:var(--red);">① 前鋸筋が弱い</div>
+                <div style="font-size:11px;color:#b0bbc8;margin-top:2px;">↓</div>
+              </div>
+              <div style="background:rgba(230,57,70,0.12);border:1px solid rgba(230,57,70,0.3);border-radius:8px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:var(--red);">② 肩甲骨が上方回旋不足・浮き上がる</div>
+                <div style="font-size:11px;color:#b0bbc8;margin-top:2px;">↓</div>
+              </div>
+              <div style="background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.35);border-radius:8px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:var(--red);">③ 腕を上げると肩峰下のスペースが狭まる</div>
+                <div style="font-size:11px;color:#b0bbc8;margin-top:2px;">↓</div>
+              </div>
+              <div style="background:rgba(230,57,70,0.18);border:1px solid rgba(230,57,70,0.4);border-radius:8px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:var(--red);">④ ローテーターカフが肩峰に繰り返し衝突</div>
+                <div style="font-size:11px;color:#b0bbc8;margin-top:2px;">↓</div>
+              </div>
+              <div style="background:rgba(230,57,70,0.22);border:1px solid rgba(230,57,70,0.5);border-radius:8px;padding:10px;">
+                <div style="font-size:11px;font-weight:700;color:var(--red);">⑤ 腱板炎・インピンジメント症候群</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ウィングスキャプラ -->
+      <div class="info-box ib-red" style="margin-top:16px;">
+        <div class="ib-title">🚨 翼状肩甲（ウィングスキャプラ）とは</div>
+        <p>前鋸筋が極端に弱化すると、肩甲骨の内側縁が背中から浮き上がり「翼のように」見える状態（翼状肩甲）になる。腕を前に伸ばしたり壁を押す動作で確認できる。<strong style="color:var(--red);">翼状肩甲がある選手は肩障害のリスクが3〜5倍高い</strong>とされる。また長胸神経の損傷（スポーツや事故による）でも起きる。</p>
+        <p style="margin-top:8px;"><strong style="color:var(--white);">セルフチェック：</strong>壁に向かって腕を伸ばして壁を押す。肩甲骨の内側が背中から浮き上がったらウィングスキャプラの疑いあり。コーチや理学療法士に確認してもらうこと。</p>
+      </div>
+
+      <!-- 強化エクサ -->
+      <h3 style="margin-top:20px;">前鋸筋を選択的に鍛えるエクササイズ</h3>
+      <div class="std-grid">
+        <div class="std-card">
+          <div class="std-label" style="color:#6fa8ff;">セレーションプッシュアップ<br>（前鋸筋プッシュアップ）</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            通常の腕立て伏せで腕を伸ばしきった後、さらに肩甲骨を外側に「もう一押し」する動作を加える。この最後の数センチが前鋸筋を最大収縮させる。<br>
+            <strong style="color:var(--white);">回数：</strong>10〜15回 × 3セット（毎日可）<br>
+            <strong style="color:var(--gold);">効果：</strong>前鋸筋の最強化種目。投手・野手全員に推奨。
+          </div>
+        </div>
+        <div class="std-card">
+          <div class="std-label" style="color:var(--green);">ウォールスライド</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            壁に前腕をつけて腕を頭上にスライドさせる。肩甲骨の上方回旋を伴う動作で、前鋸筋と僧帽筋下部を同時に活性化。肩甲骨が壁から離れないよう維持することが重要。<br>
+            <strong style="color:var(--white);">回数：</strong>10回 × 3セット（練習前後）<br>
+            <strong style="color:var(--gold);">効果：</strong>投球前のアクティベーションに最適。
+          </div>
+        </div>
+        <div class="std-card">
+          <div class="std-label" style="color:var(--gold);">ダンベル プロトラクション</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            仰向けでダンベルを天井に向けて持ち、腕を伸ばしたまま肩甲骨だけを前に突き出す（肘は曲げない）。純粋に前鋸筋だけを強化できる。<br>
+            <strong style="color:var(--white);">重量：</strong>3〜5kg × 15回 × 3セット<br>
+            <strong style="color:var(--gold);">効果：</strong>肩甲骨安定化の基礎訓練として最適。
+          </div>
+        </div>
+        <div class="std-card">
+          <div class="std-label" style="color:#c49aff;">ケーブル/バンド プロトラクション</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            ケーブルマシンまたはゴムバンドを使い、腕を前方に伸ばしながら肩甲骨を押し出す動作。立位で行うため機能的な強化になる。<br>
+            <strong style="color:var(--white);">回数：</strong>12〜15回 × 3セット<br>
+            <strong style="color:var(--gold);">効果：</strong>投球動作に近い角度で強化できる。
+          </div>
+        </div>
+        <div class="std-card">
+          <div class="std-label" style="color:var(--red);">プランク（前鋸筋意識版）</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            通常のプランクで「肩甲骨を外側に押し広げる（プロトラクト）」意識を持つ。肩甲骨が内側に寄らないよう前鋸筋を等尺性収縮で維持する。<br>
+            <strong style="color:var(--white);">時間：</strong>30〜60秒 × 3セット<br>
+            <strong style="color:var(--gold);">効果：</strong>体幹トレーニングと前鋸筋強化を同時に行える。
+          </div>
+        </div>
+        <div class="std-card">
+          <div class="std-label" style="color:var(--green);">YTWエクサ（W部分）</div>
+          <div class="std-note" style="font-size:12px;line-height:1.8;">
+            うつ伏せまたはインクラインベンチで、腕をW字形に開いた状態から肩甲骨を寄せながら上げる。後部の肩甲骨安定筋と前鋸筋のバランスを整える複合種目。<br>
+            <strong style="color:var(--white);">回数：</strong>10〜12回 × 3セット<br>
+            <strong style="color:var(--gold);">効果：</strong>投手の肩甲骨安定化プログラムの核心。
+          </div>
+        </div>
+      </div>
+
+      <!-- 力のカップル -->
+      <div class="section" style="margin-top:16px;padding:18px;background:rgba(0,200,150,0.05);border:1px solid rgba(0,200,150,0.15);border-radius:12px;">
+        <h3 style="color:var(--green);margin-top:0;">🔗 前鋸筋と「力のカップル（Force Couple）」</h3>
+        <p style="font-size:12px;color:#b0bbc8;line-height:1.8;">腕を耳の高さより上に上げる（上方回旋）ためには、前鋸筋だけでは不十分で、<strong style="color:var(--white);">3つの筋肉が三角形に力を分担</strong>することで初めて実現する。</p>
+        <div style="display:flex;justify-content:center;margin:16px 0;">
+          <svg width="280" height="200" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- 肩甲骨 -->
+            <polygon points="140,100 110,160 170,160" fill="rgba(28,37,64,0.8)" stroke="#3d4f6e" stroke-width="2"/>
+            <text x="140" y="140" text-anchor="middle" fill="#8892a4" font-size="10" font-family="Noto Sans JP,sans-serif">肩甲骨</text>
+            <!-- Force arrows -->
+            <!-- 僧帽筋上部: 上外側へ -->
+            <line x1="140" y1="100" x2="185" y2="55" stroke="#f5a623" stroke-width="2.5"/>
+            <polygon points="185,55 176,63 180,50" fill="#f5a623"/>
+            <!-- 前鋸筋: 下前方へ -->
+            <line x1="110" y1="160" x2="58" y2="178" stroke="#6fa8ff" stroke-width="2.5"/>
+            <polygon points="58,178 68,170 60,185" fill="#6fa8ff"/>
+            <!-- 僧帽筋下部: 下内側へ -->
+            <line x1="170" y1="160" x2="215" y2="185" stroke="#06d6a0" stroke-width="2.5"/>
+            <polygon points="215,185 205,177 218,177" fill="#06d6a0"/>
+            <!-- Labels -->
+            <rect x="188" y="42" width="88" height="30" rx="4" fill="rgba(245,166,35,0.15)" stroke="rgba(245,166,35,0.3)" stroke-width="1"/>
+            <text x="232" y="55" text-anchor="middle" fill="#f5a623" font-size="9" font-weight="700" font-family="Noto Sans JP,sans-serif">僧帽筋 上部</text>
+            <text x="232" y="66" text-anchor="middle" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">上外側に引く</text>
+            <rect x="4" y="170" width="88" height="30" rx="4" fill="rgba(58,134,255,0.15)" stroke="rgba(58,134,255,0.3)" stroke-width="1"/>
+            <text x="48" y="183" text-anchor="middle" fill="#6fa8ff" font-size="9" font-weight="700" font-family="Noto Sans JP,sans-serif">前鋸筋 下部</text>
+            <text x="48" y="194" text-anchor="middle" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">下角を前外側へ</text>
+            <rect x="188" y="178" width="88" height="18" rx="4" fill="rgba(0,200,150,0.15)" stroke="rgba(0,200,150,0.3)" stroke-width="1"/>
+            <text x="232" y="191" text-anchor="middle" fill="#06d6a0" font-size="9" font-weight="700" font-family="Noto Sans JP,sans-serif">僧帽筋 下部　下内側へ</text>
+            <!-- Rotation arc -->
+            <path d="M130,100 Q150,80 160,100" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="160,100 153,92 163,92" fill="rgba(255,255,255,0.3)"/>
+            <text x="145" y="88" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Noto Sans JP,sans-serif">上方回旋</text>
+          </svg>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+          <div style="background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;color:#f5a623;">僧帽筋上部</div>
+            <div style="font-size:11px;color:#b0bbc8;margin-top:4px;">肩甲骨の上外側を上に引き上げる</div>
+          </div>
+          <div style="background:rgba(58,134,255,0.08);border:1px solid rgba(58,134,255,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;color:#6fa8ff;">前鋸筋（下部）</div>
+            <div style="font-size:11px;color:#b0bbc8;margin-top:4px;">下角を前外側に引き出す</div>
+          </div>
+          <div style="background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-size:11px;font-weight:700;color:#06d6a0;">僧帽筋下部</div>
+            <div style="font-size:11px;color:#b0bbc8;margin-top:4px;">内側縁を下に安定させる</div>
+          </div>
+        </div>
+        <div class="info-box ib-gold" style="margin-top:12px;">
+          <div class="ib-title">💡 この3筋のうち1つでも弱いと上方回旋が崩れる</div>
+          <p>前鋸筋だけでなく、僧帽筋下部も同時に鍛えることが完全な上方回旋確保の鍵。YTWエクサ・フェイスプルは両方を同時に鍛えられる最優先種目。</p>
+        </div>
+      </div>
+
+      <!-- チェック方法 -->
+      <div class="info-box ib-blue" style="margin-top:16px;">
+        <div class="ib-title">🔍 前鋸筋の強さをセルフチェックする方法</div>
+        <p><strong style="color:var(--white);">チェック①（ウォールプッシュ）：</strong>壁から50cm離れて立ち、両手を肩の高さで壁につけてゆっくり押す。肩甲骨の内側が背中から浮き上がる→前鋸筋弱化の疑い。<br>
+        <strong style="color:var(--white);">チェック②（腕を真上に上げる）：</strong>腕を真上に上げた時、肩がすくんだり首が傾いたりする→上方回旋不足＝前鋸筋・僧帽筋の弱化。<br>
+        <strong style="color:var(--white);">チェック③（プッシュアップ最終位置）：</strong>腕立て伏せで腕を伸ばしきった時、肩甲骨の間が広がらない（プロトラクションが起きない）→前鋸筋が使えていない。</p>
+      </div>
+    </div>
+
       <div class="info-box ib-gold" style="margin-top:16px;">
         <div class="ib-title">⚾ 野球で「最も重要な筋肉トップ5」</div>
         <p>科学的根拠と実証的な重要性から選んだ野球選手の最優先強化筋肉：<br>
@@ -1463,6 +1708,851 @@ header{
 
   </div><!-- /content -->
 </div><!-- /page-anatomy -->
+
+
+<!-- ============================================================ -->
+<!-- PAGE: 筋肉図鑑 -->
+<!-- ============================================================ -->
+<div class="page" id="page-muscdict">
+
+  <!-- CSS for muscle dict -->
+  <style>
+  .mdict-wrap{display:flex;gap:0;min-height:calc(100vh - 112px);}
+  .mdict-sidebar{width:200px;flex-shrink:0;background:var(--navy2);border-right:1px solid var(--border);padding:12px 0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;}
+  .mdict-sidebar::-webkit-scrollbar{width:4px;}
+  .mdict-sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px;}
+  .mdict-group-label{font-size:9px;font-weight:700;color:var(--gray);letter-spacing:1.5px;padding:12px 14px 4px;text-transform:uppercase;}
+  .mdict-btn{display:block;width:100%;text-align:left;padding:8px 14px;border:none;background:transparent;color:#c8d4e0;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all 0.15s;border-left:3px solid transparent;}
+  .mdict-btn:hover{background:rgba(255,255,255,0.04);color:var(--white);}
+  .mdict-btn.active{background:rgba(245,166,35,0.08);color:var(--gold);border-left-color:var(--gold);}
+  .mdict-btn .badge{display:inline-block;font-size:9px;background:rgba(255,255,255,0.07);border-radius:3px;padding:1px 5px;margin-left:4px;vertical-align:middle;}
+  .mdict-content{flex:1;padding:24px;overflow-y:auto;}
+  .mdict-panel{display:none;}
+  .mdict-panel.active{display:block;animation:fadeIn 0.25s ease;}
+  .mdict-hero{background:var(--navy3);border-radius:12px;padding:20px;margin-bottom:20px;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;}
+  .mdict-hero-info{flex:1;min-width:200px;}
+  .mdict-hero-title{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold);letter-spacing:2px;line-height:1;}
+  .mdict-hero-kana{font-size:12px;color:var(--gray);margin-top:2px;}
+  .mdict-hero-en{font-size:10px;color:rgba(245,166,35,0.5);font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+  .mdict-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+  .mdict-tag{font-size:10px;padding:3px 8px;border-radius:4px;font-weight:700;}
+  .tag-upper{background:rgba(58,134,255,0.15);color:#6fa8ff;border:1px solid rgba(58,134,255,0.3);}
+  .tag-trunk{background:rgba(168,85,247,0.15);color:#c49aff;border:1px solid rgba(168,85,247,0.3);}
+  .tag-lower{background:rgba(245,166,35,0.15);color:var(--gold);border:1px solid rgba(245,166,35,0.3);}
+  .tag-critical{background:rgba(230,57,70,0.15);color:#ff8a96;border:1px solid rgba(230,57,70,0.3);}
+  .tag-injury{background:rgba(230,57,70,0.12);color:#ff8a96;border:1px solid rgba(230,57,70,0.25);}
+  .mdict-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;}
+  .mdict-stat{text-align:center;}
+  .mdict-stat-val{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);}
+  .mdict-stat-lbl{font-size:9px;color:var(--gray);}
+  .mdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+  .mdict-card{background:var(--navy3);border-radius:10px;padding:16px;}
+  .mdict-card-title{font-size:11px;font-weight:700;margin-bottom:8px;}
+  .mdict-card p{font-size:12px;color:#c8d4e0;line-height:1.85;margin:0;}
+  .mdict-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px;}
+  .mdict-table td{padding:8px 10px;border-bottom:1px solid var(--border);color:#c8d4e0;vertical-align:top;}
+  .mdict-table td:first-child{width:90px;font-weight:700;color:var(--gray);white-space:nowrap;}
+  .mdict-ex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;}
+  .mdict-ex{background:var(--navy3);border-radius:8px;padding:12px;border-left:3px solid var(--gold);}
+  .mdict-ex-name{font-size:11px;font-weight:700;color:var(--gold);margin-bottom:4px;}
+  .mdict-ex-desc{font-size:12px;color:#c8d4e0;line-height:1.75;}
+  .mdict-ex-rep{font-size:10px;color:var(--gray);margin-top:4px;}
+  .domino{display:flex;flex-direction:column;gap:4px;}
+  .domino-step{padding:10px 14px;border-radius:6px;font-size:12px;color:#e8f0f8;line-height:1.7;}
+  @media(max-width:600px){
+    .mdict-wrap{flex-direction:column;}
+    .mdict-sidebar{width:100%;height:auto;position:static;display:flex;flex-wrap:nowrap;overflow-x:auto;padding:8px 0;border-right:none;border-bottom:1px solid var(--border);}
+    .mdict-group-label{display:none;}
+    .mdict-btn{white-space:nowrap;padding:6px 12px;border-left:none;border-bottom:3px solid transparent;}
+    .mdict-btn.active{border-bottom-color:var(--gold);border-left:none;}
+    .mdict-content{padding:16px;}
+    .mdict-grid{grid-template-columns:1fr;}
+    .mdict-ex-grid{grid-template-columns:1fr 1fr;}
+  }
+  </style>
+
+  <div class="mdict-wrap">
+
+    <!-- ===== SIDEBAR ===== -->
+    <nav class="mdict-sidebar">
+      <div class="mdict-group-label">上半身 Upper</div>
+      <button class="mdict-btn active" onclick="selectMuscle('serratus',this)">🔵 前鋸筋 <span class="badge">必須</span></button>
+      <button class="mdict-btn" onclick="selectMuscle('rotator',this)">🔴 ローテーターカフ</button>
+      <button class="mdict-btn" onclick="selectMuscle('lats',this)">🔵 広背筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('pec',this)">🔵 大胸筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('trapezius',this)">🔵 僧帽筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('deltoid',this)">🔵 三角筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('triceps',this)">🔵 上腕三頭筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('forearm',this)">🔵 前腕屈筋群</button>
+      <div class="mdict-group-label">体幹 Trunk</div>
+      <button class="mdict-btn" onclick="selectMuscle('obliques',this)">🟣 腹斜筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('transverse',this)">🟣 腹横筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('multifidus',this)">🟣 多裂筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('erectors',this)">🟣 脊柱起立筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('ql',this)">🟣 腰方形筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('diaphragm',this)">🟣 横隔膜</button>
+      <div class="mdict-group-label">下半身 Lower</div>
+      <button class="mdict-btn" onclick="selectMuscle('glutes',this)">🟡 大臀筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('hamstrings',this)">🟡 ハムストリングス</button>
+      <button class="mdict-btn" onclick="selectMuscle('quads',this)">🟡 大腿四頭筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('iliopsoas',this)">🟡 腸腰筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('glmed',this)">🟡 中臀筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('adductors',this)">🟡 内転筋群</button>
+      <button class="mdict-btn" onclick="selectMuscle('deephip',this)">🟡 深層外旋6筋</button>
+      <button class="mdict-btn" onclick="selectMuscle('calf',this)">🟡 腓腹筋・ヒラメ筋</button>
+    </nav>
+
+    <!-- ===== CONTENT AREA ===== -->
+    <div class="mdict-content">
+
+      <!-- =============================== SERRATUS =============================== -->
+      <div class="mdict-panel active" id="md-serratus">
+        <div class="mdict-hero">
+          <div style="flex-shrink:0;text-align:center;">
+            <svg width="160" height="190" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg">
+              <path d="M45,15 Q80,10 115,15 L122,65 Q118,105 105,130 Q90,150 80,158 Q70,150 55,130 Q42,105 38,65 Z" fill="#1c2540" stroke="#2d3a5a" stroke-width="1.5"/>
+              <path d="M80,25 Q62,28 52,38" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,42 Q60,46 50,58" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,57 Q59,62 48,74" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,72 Q59,78 47,90" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,87 Q60,93 48,104" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,102 Q61,108 50,118" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,42 Q100,46 110,58" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,57 Q101,62 112,74" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,72 Q101,78 113,90" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <path d="M80,87 Q100,93 112,104" fill="none" stroke="#3d4f6e" stroke-width="1.5"/>
+              <!-- serratus highlight right side -->
+              <path d="M108,56 Q124,60 127,70 Q123,66 114,68 Q113,79 116,88 Q112,84 110,86 Q113,97 115,104 Q110,100 109,102 Q111,112 112,120 Q106,116 106,112 Q104,100 106,90 Q106,80 106,70 Z" fill="rgba(58,134,255,0.25)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <line x1="115" y1="88" x2="145" y2="78" stroke="#6fa8ff" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="147" y="75" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">起始:</text>
+              <text x="147" y="85" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">第1〜9</text>
+              <text x="147" y="95" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">肋骨</text>
+              <circle cx="112" cy="115" r="4" fill="rgba(58,134,255,0.5)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <line x1="112" y1="115" x2="142" y2="128" stroke="#6fa8ff" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="144" y="125" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">停止:</text>
+              <text x="144" y="135" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">肩甲骨</text>
+              <text x="144" y="145" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">内側縁</text>
+              <text x="80" y="175" text-anchor="middle" fill="#6fa8ff" font-size="9" font-weight="700" font-family="Noto Sans JP,sans-serif">前鋸筋（青色部分）</text>
+            </svg>
+          </div>
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">SERRATUS ANTERIOR</div>
+            <div class="mdict-hero-title">前鋸筋</div>
+            <div class="mdict-hero-kana">ぜんきょきん</div>
+            <div class="mdict-tags" style="margin-top:10px;">
+              <span class="mdict-tag tag-upper">上半身</span>
+              <span class="mdict-tag tag-critical">投手必須</span>
+              <span class="mdict-tag" style="background:rgba(0,200,150,0.15);color:var(--green);border:1px solid rgba(0,200,150,0.3);">肩甲骨安定</span>
+            </div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>第1〜9肋骨の外側面（鋸歯状）</td></tr>
+              <tr><td>停止</td><td>肩甲骨内側縁・下角（前面）</td></tr>
+              <tr><td>神経</td><td>長胸神経（C5・C6・C7）</td></tr>
+              <tr><td>主機能</td><td>肩甲骨外転・上方回旋・胸壁への固定</td></tr>
+            </table>
+          </div>
+        </div>
+        <!-- 機能4つ -->
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;">
+            <div class="mdict-card-title" style="color:#6fa8ff;">① 肩甲骨外転・前傾</div>
+            <p>肩甲骨を背骨から離して前外側に引き出す。プッシュアップで腕を伸ばしきった時の動作。<strong style="color:var(--white);">肩甲骨を胸壁に密着させる唯一の筋肉。</strong>弱いと肩甲骨が浮く（ウィングスキャプラ）。</p>
+          </div>
+          <div class="mdict-card" style="border-left:3px solid var(--green);">
+            <div class="mdict-card-title" style="color:var(--green);">② 肩甲骨上方回旋（最重要）</div>
+            <p>下角を前外側に引いて肩甲骨を上方回旋させる。腕を耳の高さより上に上げるために<strong style="color:var(--white);">絶対に必要な動作。</strong>僧帽筋上部・下部と「力のカップル」を形成。</p>
+          </div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);">
+            <div class="mdict-card-title" style="color:var(--gold);">③ 肩甲骨の安定化</div>
+            <p>投球・打撃・プッシュアップで肩甲骨が動揺しないよう固定。<strong style="color:var(--white);">弱いとローテーターカフに過負荷がかかり肩障害の連鎖が始まる。</strong></p>
+          </div>
+          <div class="mdict-card" style="border-left:3px solid #c49aff;">
+            <div class="mdict-card-title" style="color:#c49aff;">④ 呼吸補助筋</div>
+            <p>深呼吸時に肋骨を引き上げて胸郭を広げる補助をする。長時間投球後の疲労でこの機能が低下すると呼吸が浅くなり後半のパフォーマンスが落ちる。</p>
+          </div>
+        </div>
+        <!-- 弱化の連鎖 -->
+        <div class="section" style="margin-top:16px;padding:16px;background:rgba(230,57,70,0.05);border:1px solid rgba(230,57,70,0.2);border-radius:10px;">
+          <h3 style="color:var(--red);margin-top:0;font-size:14px;">🚨 弱化した場合のドミノ倒し</h3>
+          <div class="domino">
+            <div class="domino-step" style="background:rgba(230,57,70,0.22);border-left:3px solid rgba(230,57,70,0.8);">① 前鋸筋が弱い → 肩甲骨が胸壁から浮き上がる（ウィングスキャプラ）</div>
+            <div style="text-align:center;color:var(--red);font-size:12px;">↓</div>
+            <div class="domino-step" style="background:rgba(230,57,70,0.27);border-left:3px solid rgba(230,57,70,0.85);">② 肩甲骨の上方回旋が不足 → 腕を上げると肩峰下スペースが狭くなる</div>
+            <div style="text-align:center;color:var(--red);font-size:12px;">↓</div>
+            <div class="domino-step" style="background:rgba(230,57,70,0.32);border-left:3px solid rgba(230,57,70,0.9);">③ ローテーターカフが肩峰に繰り返し衝突（インピンジメント）</div>
+            <div style="text-align:center;color:var(--red);font-size:12px;">↓</div>
+            <div class="domino-step" style="background:rgba(230,57,70,0.38);border-left:3px solid var(--red);">④ 腱板炎・腱板断裂 → 投手生命の危機</div>
+          </div>
+        </div>
+        <!-- セルフチェック -->
+        <div class="info-box ib-blue" style="margin-top:14px;">
+          <div class="ib-title">🔍 セルフチェック3つ</div>
+          <p style="text-align:left;"><strong style="color:#7ab8ff;">① ウォールプッシュ：</strong>壁50cmで両手を肩の高さにつけ押す。肩甲骨内側が浮く→弱化の疑い。</p>
+          <p style="text-align:left;margin-top:6px;"><strong style="color:#7ab8ff;">② 腕を真上：</strong>肩がすくんだり首が傾く→上方回旋不足。</p>
+          <p style="text-align:left;margin-top:6px;"><strong style="color:#7ab8ff;">③ プッシュアップ最終位置：</strong>肩甲骨の間が広がらない→前鋸筋が使えていない。</p>
+        </div>
+        <!-- 強化エクサ -->
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">セレーションプッシュアップ</div><div class="mdict-ex-desc">プッシュアップで腕を伸ばした後、さらに肩甲骨を外側に「もう一押し」する。この最終数センチが前鋸筋を最大収縮させる。</div><div class="mdict-ex-rep">10〜15回 × 3セット｜毎日可</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ウォールスライド</div><div class="mdict-ex-desc">壁に前腕をつけて腕を頭上にスライド。肩甲骨の上方回旋を伴い、前鋸筋と僧帽筋下部を同時に活性化。</div><div class="mdict-ex-rep">10回 × 3セット｜練習前後</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ダンベルプロトラクション</div><div class="mdict-ex-desc">仰向けでダンベルを天井に向けて持ち、腕を伸ばしたまま肩甲骨だけを前に突き出す。純粋な前鋸筋強化。</div><div class="mdict-ex-rep">3〜5kg × 15回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== ROTATOR CUFF =============================== -->
+      <div class="mdict-panel" id="md-rotator">
+        <div class="mdict-hero">
+          <div style="flex-shrink:0;text-align:center;">
+            <svg width="160" height="190" viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg">
+              <!-- shoulder blade outline -->
+              <ellipse cx="80" cy="80" rx="55" ry="65" fill="#1c2540" stroke="#2d3a5a" stroke-width="1.5"/>
+              <!-- humerus -->
+              <ellipse cx="80" cy="30" rx="22" ry="22" fill="#1c2540" stroke="#3d4f6e" stroke-width="1.5"/>
+              <!-- rotator cuff muscles -->
+              <!-- supraspinatus (top) -->
+              <path d="M60,30 Q80,18 100,30" fill="rgba(6,214,160,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="80" y="22" text-anchor="middle" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">棘上筋</text>
+              <!-- infraspinatus (back right) -->
+              <path d="M100,30 Q118,50 112,75" fill="rgba(58,134,255,0.3)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <text x="122" y="55" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">棘下筋</text>
+              <!-- teres minor (back lower) -->
+              <path d="M112,75 Q108,92 96,98" fill="rgba(168,85,247,0.3)" stroke="#c49aff" stroke-width="1.5"/>
+              <text x="118" y="90" fill="#c49aff" font-size="8" font-family="Noto Sans JP,sans-serif">小円筋</text>
+              <!-- subscapularis (front) -->
+              <path d="M60,30 Q42,50 46,75" fill="rgba(245,166,35,0.3)" stroke="#f5a623" stroke-width="1.5"/>
+              <text x="20" y="55" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">肩甲下筋</text>
+              <text x="80" y="175" text-anchor="middle" fill="#b0bbc8" font-size="9" font-weight="700" font-family="Noto Sans JP,sans-serif">ローテーターカフ（4筋）</text>
+            </svg>
+          </div>
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">ROTATOR CUFF</div>
+            <div class="mdict-hero-title">ローテーター<br>カフ</div>
+            <div class="mdict-hero-kana">棘上筋・棘下筋・小円筋・肩甲下筋</div>
+            <div class="mdict-tags" style="margin-top:10px;">
+              <span class="mdict-tag tag-upper">上半身</span>
+              <span class="mdict-tag tag-critical">投手No.1障害</span>
+            </div>
+            <table class="mdict-table">
+              <tr><td>棘上筋</td><td>肩甲骨棘上窩 → 上腕骨大結節（上部）｜肩外転0〜60°・安定</td></tr>
+              <tr><td>棘下筋</td><td>肩甲骨棘下窩 → 上腕骨大結節（中部）｜肩外旋（主役）</td></tr>
+              <tr><td>小円筋</td><td>肩甲骨外側縁 → 上腕骨大結節（下部）｜肩外旋・水平外転</td></tr>
+              <tr><td>肩甲下筋</td><td>肩甲骨肩甲下窩 → 上腕骨小結節｜肩内旋・安定化</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #06d6a0;">
+            <div class="mdict-card-title" style="color:#06d6a0;">投球での役割</div>
+            <p>投球全フェーズで上腕骨頭を肩甲骨の関節窩に押しつけて安定させる「動的安定装置」。特にフォロースルーで腕の減速（体重×100%以上の力）を担当。1球ごとにこの負荷がかかる。</p>
+          </div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);">
+            <div class="mdict-card-title" style="color:var(--red);">弱化・損傷のサイン</div>
+            <p>投球後の肩の熱感・翌朝の肩の重さ・腕を上げると引っかかり感・外旋可動域の左右差20°以上（GIRD）→障害リスク3倍。これらは腱板炎・断裂の前兆。</p>
+          </div>
+        </div>
+        <div class="info-box ib-red" style="margin-top:14px;">
+          <div class="ib-title">🚨 GIRD（後方タイトネス）とは</div>
+          <p>投球側の肩後方が硬くなり外旋可動域が反対側より20°以上少ない状態。前鋸筋弱化と並んで肩障害の最大リスク因子。スリーパーストレッチで毎日ケア。</p>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">チューブ外旋運動</div><div class="mdict-ex-desc">肘90°固定でチューブを引き外旋させる。棘下筋・小円筋の最重要強化種目。毎日実施が理想。</div><div class="mdict-ex-rep">20回 × 2セット｜毎日</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">フェイスプル</div><div class="mdict-ex-desc">ケーブルを顔の高さに引き、肘を肩より高く保ちながら引く。棘下筋・小円筋・僧帽筋を同時強化。</div><div class="mdict-ex-rep">15回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">スリーパーストレッチ</div><div class="mdict-ex-desc">横向きに寝て投球側の腕を内旋方向に押す。GIRDの解消・後方タイトネスの改善に最も効果的。</div><div class="mdict-ex-rep">30秒 × 3セット｜練習後</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== LATS =============================== -->
+      <div class="mdict-panel" id="md-lats">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">LATISSIMUS DORSI</div>
+            <div class="mdict-hero-title">広背筋</div>
+            <div class="mdict-hero-kana">こうはいきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span><span class="mdict-tag" style="background:rgba(58,134,255,0.15);color:#6fa8ff;border:1px solid rgba(58,134,255,0.3);">球速直結</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>胸椎下部棘突起（T6〜T12）・腰椎・腸骨稜・下部肋骨</td></tr>
+              <tr><td>停止</td><td>上腕骨小結節稜（二頭筋溝底部）</td></tr>
+              <tr><td>神経</td><td>胸背神経（C6・C7・C8）</td></tr>
+              <tr><td>主機能</td><td>肩関節伸展・内旋・内転（最強の肩伸展筋）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球での役割</div><p>アクセラレーション期に腕を前方に爆発的に引き出す（肩伸展）。体幹から腕への力の橋渡しとして球速の直接的な決定因子。「下半身の力を腕に伝える最後の中継点」。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">打撃での役割</div><p>スウィング時の「引き込み動作」で活躍。バットをインサイドから出すためのリードマッスル。広背筋が弱いとアウトサイドインのスウィングになりやすい。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">懸垂（チンアップ）</div><div class="mdict-ex-desc">広背筋の最強種目。手幅は肩幅の1.5倍、肩甲骨を引き寄せながら引く。体重×1.0が当面の目標。</div><div class="mdict-ex-rep">5〜8回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ラットプルダウン</div><div class="mdict-ex-desc">懸垂の補助種目。前傾45°で引くことで広背筋の伸展機能を強調できる。</div><div class="mdict-ex-rep">8〜12回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ダンベルロー（片手）</div><div class="mdict-ex-desc">ベンチに片手をついて引く。肩甲骨を最大限に引き寄せてから肘を引く。体幹固定が重要。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== PEC =============================== -->
+      <div class="mdict-panel" id="md-pec">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">PECTORALIS MAJOR</div>
+            <div class="mdict-hero-title">大胸筋</div>
+            <div class="mdict-hero-kana">だいきょうきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>鎖骨内側半部・胸骨・第2〜6肋軟骨</td></tr>
+              <tr><td>停止</td><td>上腕骨大結節稜（二頭筋溝外側）</td></tr>
+              <tr><td>神経</td><td>内側・外側胸筋神経（C5〜T1）</td></tr>
+              <tr><td>主機能</td><td>肩水平内転・屈曲・内旋</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球での役割</div><p>リリース直前の加速フェーズで水平内転として腕を体幹前方に引き込む。ローテーターカフとのバランスが重要で、大胸筋が過剰に強くなると肩の前方不安定性が増す。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">打撃での役割</div><p>スウィングのフォロースルーで主役。バットが体の前を通過する際の「引き込み」と「加速」を担当。インパクト時に収縮力が爆発する。</p></div>
+        </div>
+        <div class="info-box ib-gold" style="margin-top:14px;"><div class="ib-title">⚖️ 大胸筋と後部肩甲帯のバランス</div><p>大胸筋だけ強化すると肩が前方に引っ張られ（巻き肩）、投球フォームが崩れる。<strong style="color:var(--white);">前：後の強化比 = 1：1.5〜2</strong>が健康な肩のバランス。フェイスプル・リバースフライを必ずセットで行う。</p></div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ベンチプレス</div><div class="mdict-ex-desc">大胸筋全体の基本種目。肩甲骨を寄せてアーチを作り、肩への負荷を最小化。</div><div class="mdict-ex-rep">5〜8回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ダンベルフライ</div><div class="mdict-ex-desc">大胸筋のストレッチ強調種目。肘を軽く曲げたまま大きな弧を描いて閉じる。</div><div class="mdict-ex-rep">12回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ケーブルクロスオーバー</div><div class="mdict-ex-desc">上・中・下の3角度で行い大胸筋の全繊維を刺激。野球の投球・打撃に近い動作面。</div><div class="mdict-ex-rep">12〜15回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== TRAPEZIUS =============================== -->
+      <div class="mdict-panel" id="md-trapezius">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">TRAPEZIUS</div>
+            <div class="mdict-hero-title">僧帽筋</div>
+            <div class="mdict-hero-kana">そうぼうきん（上部・中部・下部）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span><span class="mdict-tag" style="background:rgba(0,200,150,0.15);color:var(--green);border:1px solid rgba(0,200,150,0.3);">肩甲骨安定</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>後頭骨・C7〜T12棘突起（頸椎〜胸椎）</td></tr>
+              <tr><td>停止</td><td>鎖骨外側1/3・肩峰・肩甲棘</td></tr>
+              <tr><td>神経</td><td>副神経（第XI脳神経）・頸神経叢</td></tr>
+              <tr><td>上部</td><td>肩甲骨挙上・頸部側屈</td></tr>
+              <tr><td>中部</td><td>肩甲骨内転（後退）</td></tr>
+              <tr><td>下部</td><td>肩甲骨下制・上方回旋（最重要）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--green);"><div class="mdict-card-title" style="color:var(--green);">下部僧帽筋の特別な重要性</div><p>前鋸筋と協力して肩甲骨を下制・上方回旋させる。「力のカップル」の1角。<strong style="color:var(--white);">弱いと肩甲骨が上方にずれ（肩すくめ）インピンジメントのリスクが上がる。</strong>現代の選手に最も弱化しやすい部位。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">上部過緊張の問題</div><p>ストレス・不良姿勢で上部僧帽筋が過緊張になり肩をすくめた状態が慢性化。この状態で投球すると肩峰下インピンジメントが起きやすい。上部ストレッチと下部強化を同時に行う。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">YTWエクサ（W重点）</div><div class="mdict-ex-desc">うつ伏せでW字形に腕を開き肩甲骨を寄せながら上げる。下部僧帽筋の選択的強化。</div><div class="mdict-ex-rep">10〜12回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">フェイスプル</div><div class="mdict-ex-desc">ケーブルを顔の高さに引く。中部・下部僧帽筋とローテーターカフを同時強化。</div><div class="mdict-ex-rep">15回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">シュラッグ（NG注意）</div><div class="mdict-ex-desc">上部の強化は野球では過剰になりやすい。シュラッグを行う場合は肩をすくめきった後で意識的に「下に引く」動作を加える。</div><div class="mdict-ex-rep">慎重に実施</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== DELTOID =============================== -->
+      <div class="mdict-panel" id="md-deltoid">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">DELTOID</div>
+            <div class="mdict-hero-title">三角筋</div>
+            <div class="mdict-hero-kana">さんかくきん（前部・中部・後部）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>鎖骨外側端（前部）・肩峰（中部）・肩甲棘（後部）</td></tr>
+              <tr><td>停止</td><td>上腕骨三角筋粗面</td></tr>
+              <tr><td>神経</td><td>腋窩神経（C5・C6）</td></tr>
+              <tr><td>前部</td><td>肩屈曲・内旋・水平内転</td></tr>
+              <tr><td>中部</td><td>肩外転（60〜90°の主役）</td></tr>
+              <tr><td>後部</td><td>肩伸展・外旋・水平外転</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球での役割</div><p>コッキングで腕を外転・外旋させる際に中部・後部が働く。フォロースルーで腕の制動に後部三角筋が関与。前部は過剰に強化すると巻き肩の原因になるため注意。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">守備・打撃での役割</div><p>グローブを出す方向に腕を導く。送球時の肩外転の主役。打撃フォロースルーで腕を振り上げる動作にも関与する。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">サイドレイズ</div><div class="mdict-ex-desc">中部三角筋の選択的強化。肘を軽く曲げ、小指側を少し上にして上げる。肩がすくまないよう注意。</div><div class="mdict-ex-rep">12〜15回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">リバースフライ</div><div class="mdict-ex-desc">後部三角筋と僧帽筋中部の強化。前傾姿勢でダンベルを後方に開く。巻き肩修正にも有効。</div><div class="mdict-ex-rep">12〜15回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ショルダープレス</div><div class="mdict-ex-desc">三角筋全体の複合種目。前腕を垂直に保ち、肩より高く押し上げる。前鋸筋との協働も強化。</div><div class="mdict-ex-rep">8〜10回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== TRICEPS =============================== -->
+      <div class="mdict-panel" id="md-triceps">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">TRICEPS BRACHII</div>
+            <div class="mdict-hero-title">上腕三頭筋</div>
+            <div class="mdict-hero-kana">じょうわんさんとうきん（3頭）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span><span class="mdict-tag" style="background:rgba(0,200,150,0.15);color:var(--green);border:1px solid rgba(0,200,150,0.3);">球速決定</span></div>
+            <table class="mdict-table">
+              <tr><td>長頭</td><td>肩甲骨関節下結節 → 肘頭（尺骨）｜肩伸展も担当</td></tr>
+              <tr><td>内側頭</td><td>上腕骨後面下部 → 肘頭｜低強度時の主役</td></tr>
+              <tr><td>外側頭</td><td>上腕骨後面上部 → 肘頭｜高強度時に動員</td></tr>
+              <tr><td>神経</td><td>橈骨神経（C6・C7・C8）</td></tr>
+              <tr><td>主機能</td><td>肘伸展（全頭）・肩伸展（長頭のみ）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #06d6a0;"><div class="mdict-card-title" style="color:#06d6a0;">投球での役割（最重要局面）</div><p>アクセラレーション期に肘を一気に伸展させる。最高速フェーズでの上腕三頭筋の活動は最大となり、140km/h以上の球速には上腕三頭筋の爆発的な収縮が必須。角速度は2,500°/秒に達する。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">肘頭疲労骨折のリスク</div><p>投球のフォロースルーで肘頭（上腕三頭筋の停止部）に繰り返しの圧迫・牽引ストレスがかかる。成長期（高校生）に多い疲労骨折の一因。投球数管理・フォームの確認が必須。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">トライセプスプレスダウン</div><div class="mdict-ex-desc">ケーブルで肘を体幹に固定して押し下げる。3頭の均等な強化と肘伸展のパターン形成。</div><div class="mdict-ex-rep">12〜15回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ディップス</div><div class="mdict-ex-desc">自重で行う複合種目。体を直立に保ち三頭筋主体で行う。体重×0.7が目標。</div><div class="mdict-ex-rep">8〜10回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ナローベンチプレス</div><div class="mdict-ex-desc">手幅を肩幅に狭めたベンチプレス。三頭筋に大きな負荷をかけながら高重量を扱える。</div><div class="mdict-ex-rep">6〜8回 × 4セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== FOREARM =============================== -->
+      <div class="mdict-panel" id="md-forearm">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">FOREARM FLEXORS</div>
+            <div class="mdict-hero-title">前腕屈筋群</div>
+            <div class="mdict-hero-kana">ぜんわんくっきんぐん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-upper">上半身</span><span class="mdict-tag tag-injury">肘内側障害</span></div>
+            <table class="mdict-table">
+              <tr><td>主要筋</td><td>橈側手根屈筋・尺側手根屈筋・浅指屈筋・深指屈筋・長掌筋</td></tr>
+              <tr><td>起始</td><td>上腕骨内側上顆（共通起始腱）</td></tr>
+              <tr><td>停止</td><td>手根骨・中手骨・指骨</td></tr>
+              <tr><td>神経</td><td>正中神経・尺骨神経</td></tr>
+              <tr><td>主機能</td><td>手関節屈曲・指屈曲・前腕回内</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球での役割</div><p>リリース直前のスナップ動作で手首を屈曲させ球速の最後の5〜7%を加速する。球種制御（変化球のスピン方向）は前腕屈筋群の精密なコントロールで決まる。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">内側上顆炎（ゴルフ肘）</div><p>前腕屈筋群の共通起始腱（内側上顆）への過負荷で炎症。高校球児の肘障害の主要原因のひとつ。投球後の肘内側の痛み・曲げ伸ばし時の引っかかりが初期症状。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">リストカール</div><div class="mdict-ex-desc">ベンチに前腕を置き手首を屈曲。軽重量・高回数で腱への負荷を管理しながら強化。</div><div class="mdict-ex-rep">20回 × 3セット｜軽重量</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ハンドグリッパー</div><div class="mdict-ex-desc">握力の強化と前腕屈筋群の持久力向上。毎日実施可能。200回/日を目標に分割して行う。</div><div class="mdict-ex-rep">50回 × 4セット｜毎日</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">タオルスクイーズ</div><div class="mdict-ex-desc">濡れタオルを絞る動作で前腕全体を強化。試合前の握力アクティベーションにも使える。</div><div class="mdict-ex-rep">20回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== OBLIQUES =============================== -->
+      <div class="mdict-panel" id="md-obliques">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">INTERNAL / EXTERNAL OBLIQUES</div>
+            <div class="mdict-hero-title">腹斜筋</div>
+            <div class="mdict-hero-kana">ふくしゃきん（外腹斜筋・内腹斜筋）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span><span class="mdict-tag tag-critical">球速・飛距離直結</span></div>
+            <table class="mdict-table">
+              <tr><td>外腹斜筋</td><td>第5〜12肋骨 → 腸骨稜・白線｜同側側屈・反対側回旋</td></tr>
+              <tr><td>内腹斜筋</td><td>胸腰筋膜・腸骨稜 → 第10〜12肋骨・白線｜同側回旋</td></tr>
+              <tr><td>神経</td><td>肋間神経（T7〜T12）・腸骨下腹神経</td></tr>
+              <tr><td>最重要</td><td>体幹回旋（投球・打撃の核心）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #c49aff;"><div class="mdict-card-title" style="color:#c49aff;">投球・打撃の回転力の主役</div><p>外腹斜筋（反対側回旋）と内腹斜筋（同側回旋）が対で働き体幹を回旋させる。研究では腹斜筋の出力が球速と最も強い相関を示す。<strong style="color:var(--white);">MLBの投手は腹斜筋肉離れが最多の体幹障害。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">回旋のタイミング</div><p>骨盤が先に回旋（ヒップファースト）した後、腹斜筋が体幹を追いかけるように回旋させることで「セパレーション」が生まれパワーが増幅される。この「溜め→爆発」がバットスピード・球速に直結。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">メディシンボール回転スロー</div><div class="mdict-ex-desc">壁に対して体を回旋させながらボールを投げつける。投球・打撃の動作パターンで腹斜筋を爆発的に鍛える。</div><div class="mdict-ex-rep">10回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ウッドチョップ</div><div class="mdict-ex-desc">ケーブルまたはバンドを対角線上に引く。上から下（ハイ〜ロー）と下から上（ロー〜ハイ）両方行う。</div><div class="mdict-ex-rep">12回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ランドマインツイスト</div><div class="mdict-ex-desc">バーベルの端を持って左右に回旋。体幹の回旋力と安定性を同時に鍛える。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== TRANSVERSE =============================== -->
+      <div class="mdict-panel" id="md-transverse">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">TRANSVERSUS ABDOMINIS</div>
+            <div class="mdict-hero-title">腹横筋</div>
+            <div class="mdict-hero-kana">ふくおうきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span><span class="mdict-tag tag-critical">全動作の土台</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>第7〜12肋骨内面・腸骨稜・鼡径靭帯・胸腰筋膜</td></tr>
+              <tr><td>停止</td><td>白線・恥骨稜（腱膜として）</td></tr>
+              <tr><td>神経</td><td>肋間神経（T7〜T12）・腸骨下腹神経</td></tr>
+              <tr><td>主機能</td><td>腹腔内圧（IAP）上昇・腰椎安定・インナーコア形成</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">「先行収縮」という特別な性質</div><p>腕や脚が動き出す0.03〜0.05秒前に腹横筋が自動的に収縮し（先行収縮・フィードフォワード活性化）腰椎を固める。これが弱いと動作のたびに腰椎がぶれ、力が30〜40%漏れる。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">弱化と腰痛の直接関係</div><p>腰痛患者では腹横筋の先行収縮が消失していることが研究で確認されている。腰痛を繰り返す選手は腹横筋の再活性化（ドローインから始める）が最優先。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ（段階的に）</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ドローイン</div><div class="mdict-ex-desc">仰向けで「お腹を薄くする」感覚で腹横筋だけを収縮させる。腹部が凹むが呼吸は止めない。先行収縮の再学習に必須。</div><div class="mdict-ex-rep">10秒保持 × 10回｜毎日</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">デッドバッグ</div><div class="mdict-ex-desc">仰向けで腕脚を交互に伸ばす。腰椎がマットから離れないよう腹横筋で固定する。多裂筋も同時に強化。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">プランク（IAP意識）</div><div class="mdict-ex-desc">「お腹を薄く保ったまま」プランクを行う。腹横筋の等尺性収縮でIAPを高め腰椎を安定させる。</div><div class="mdict-ex-rep">30〜60秒 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== MULTIFIDUS =============================== -->
+      <div class="mdict-panel" id="md-multifidus">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">MULTIFIDUS</div>
+            <div class="mdict-hero-title">多裂筋</div>
+            <div class="mdict-hero-kana">たれつきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span><span class="mdict-tag" style="background:rgba(58,134,255,0.15);color:#6fa8ff;border:1px solid rgba(58,134,255,0.3);">腰痛予防</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>仙骨・腸骨稜・腰椎〜頸椎の乳頭突起</td></tr>
+              <tr><td>停止</td><td>2〜4椎骨上位の棘突起（短く結ぶ）</td></tr>
+              <tr><td>神経</td><td>各椎骨の後枝内側枝</td></tr>
+              <tr><td>主機能</td><td>椎骨の節単位安定・腰椎伸展補助</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">「節単位安定」とは</div><p>多裂筋は椎骨を2〜4個おきに短く結んでいる。この短い走行が椎骨の「微細なズレ」を防ぐ。<strong style="color:var(--white);">脊柱起立筋のような大きな動作筋ではなく、椎骨を個別に固定する精密な安定装置。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">腰痛との直接関係</div><p>急性腰痛を経験すると多裂筋が反射的に萎縮し、痛みが消えた後も萎縮したままになることが研究で判明。これが「腰痛の再発」の主原因。腰痛既往者は多裂筋の再活性化が最優先。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">バードドッグ</div><div class="mdict-ex-desc">四つ這いで対角線の腕脚を伸ばして保持。多裂筋と腹横筋を同時に活性化する最優先種目。腰が動かないことを確認しながら行う。</div><div class="mdict-ex-rep">10秒保持 × 10回</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">デッドリフト（軽）</div><div class="mdict-ex-desc">ニュートラルスパイン（自然なS字カーブ）を保ちながら引く。多裂筋に等尺性収縮を強制する機能的な強化種目。</div><div class="mdict-ex-rep">BW×0.5〜0.8 × 8回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">スーパーマン</div><div class="mdict-ex-desc">うつ伏せで腕脚を同時に上げる。多裂筋・脊柱起立筋の等尺性強化。腰痛リハビリの初期種目として最適。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== ERECTORS =============================== -->
+      <div class="mdict-panel" id="md-erectors">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">ERECTOR SPINAE</div>
+            <div class="mdict-hero-title">脊柱起立筋</div>
+            <div class="mdict-hero-kana">せきちゅうきりつきん（腸肋筋・最長筋・棘筋）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span></div>
+            <table class="mdict-table">
+              <tr><td>腸肋筋</td><td>腸骨稜・肋骨 → 肋骨・頸椎横突起（最外側）</td></tr>
+              <tr><td>最長筋</td><td>仙骨・腰椎 → 肋骨・頸椎横突起（中間）</td></tr>
+              <tr><td>棘筋</td><td>腰椎・胸椎棘突起 → 頸椎・頭蓋（最内側）</td></tr>
+              <tr><td>主機能</td><td>脊柱伸展・側屈・抗重力姿勢維持</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">投球・打撃での役割</div><p>投球・打撃時の上半身姿勢を安定させる「大黒柱」。フォロースルーで体幹が前傾する際の遠心制動も担当。<strong style="color:var(--white);">弱いと体幹が前屈みになりフォームが崩れ球速が低下する。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--blue);"><div class="mdict-card-title" style="color:#6fa8ff;">多裂筋との役割分担</div><p>多裂筋は「細かい安定（節単位）」、脊柱起立筋は「大きな動き（全体の伸展）」を担当。両方が機能して初めて腰椎が正しく動く。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">デッドリフト</div><div class="mdict-ex-desc">脊柱起立筋の最強種目。ヒンジ動作で股関節を主役にしながら背中全体を等尺性収縮で固める。</div><div class="mdict-ex-rep">BW×1.5〜2.0 × 5回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">グッドモーニング</div><div class="mdict-ex-desc">バーベルを肩に担いで股関節を折る。脊柱起立筋の伸展強化とハムストのストレッチを同時に行える。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">バックエクステンション</div><div class="mdict-ex-desc">ローマンチェアで上半身を前傾から水平まで戻す。脊柱起立筋の分離強化として使いやすい。</div><div class="mdict-ex-rep">12〜15回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== QL =============================== -->
+      <div class="mdict-panel" id="md-ql">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">QUADRATUS LUMBORUM</div>
+            <div class="mdict-hero-title">腰方形筋</div>
+            <div class="mdict-hero-kana">こしほうけいきん（QL）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span><span class="mdict-tag tag-injury">高校球児の腰痛主因</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>腸骨稜内唇・腸腰靭帯</td></tr>
+              <tr><td>停止</td><td>第12肋骨・腰椎横突起（L1〜L4）</td></tr>
+              <tr><td>神経</td><td>腰神経叢（T12・L1〜L4）</td></tr>
+              <tr><td>主機能</td><td>体幹側屈（最強の側屈筋）・第12肋骨固定・骨盤挙上</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">高校球児に多い「片側腰痛」の主犯</div><p>投球側のQLは毎回の投球で収縮し続けるため、非投球側との左右差が生まれやすい。<strong style="color:var(--white);">QLの過緊張は腸骨を上に引き上げ（機能的脚長差）、骨盤の傾きを作り腰椎・股関節に慢性ストレスをかける。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球での役割</div><p>投球の加速フェーズで体幹が投球方向に傾く際に反投球側のQLが離心性収縮で制動する。骨盤水平保持に関与し、安定した投球フォームの維持に貢献。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">ケアと強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">QLストレッチ</div><div class="mdict-ex-desc">側臥位で上側の腕を頭上に伸ばし、体全体を弓なりに反らす。過緊張したQLのリリースに最適。</div><div class="mdict-ex-rep">30〜45秒 × 3セット｜毎日</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">サイドプランク</div><div class="mdict-ex-desc">QLの等尺性強化と体幹側方安定性の向上。左右差がある場合は弱い側を多めに行う。</div><div class="mdict-ex-rep">30〜45秒 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">フォームローラー（脇腹）</div><div class="mdict-ex-desc">横向きで脇腹をローラーにのせてほぐす。QLの筋膜リリースに効果的。痛みが強い部位で20秒止まる。</div><div class="mdict-ex-rep">左右各1〜2分｜毎日</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== DIAPHRAGM =============================== -->
+      <div class="mdict-panel" id="md-diaphragm">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">DIAPHRAGM</div>
+            <div class="mdict-hero-title">横隔膜</div>
+            <div class="mdict-hero-kana">おうかくまく</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-trunk">体幹</span><span class="mdict-tag" style="background:rgba(0,200,150,0.15);color:var(--green);border:1px solid rgba(0,200,150,0.3);">インナーユニット</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>胸骨体・第6〜12肋軟骨・腰椎（L1〜L3）</td></tr>
+              <tr><td>停止</td><td>中心腱（ドーム状の頂点）</td></tr>
+              <tr><td>神経</td><td>横隔神経（C3・C4・C5）</td></tr>
+              <tr><td>主機能</td><td>呼吸（吸気時に下降）・腹腔内圧上昇（腹横筋と協働）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--green);"><div class="mdict-card-title" style="color:var(--green);">呼吸筋と体幹安定筋の二重機能</div><p>横隔膜は「呼吸筋」であると同時に「体幹安定筋」。腹横筋・多裂筋・骨盤底筋と「インナーユニット」を形成し、IAP（腹腔内圧）を高めて腰椎を360°から安定させる。<strong style="color:var(--white);">投球前のブレス（息を止めた直後）で横隔膜が最大収縮し体幹剛性が最高になる。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">投球時の呼吸戦略</div><p>ワインドアップで息を吸い（横隔膜下降・IAP上昇準備）→コッキングで止め→リリースで吐く。この呼吸パターンが自然にできている投手は体幹剛性を最大化できている。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化・再教育エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">腹式呼吸（横隔膜呼吸）</div><div class="mdict-ex-desc">仰向けでお腹に手を置き「お腹が膨らむ」呼吸を意識する。胸だけが動く選手は横隔膜が使えていない。毎日5分で横隔膜の活性化が改善。</div><div class="mdict-ex-rep">毎日5〜10分</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">90/90 ブリージング</div><div class="mdict-ex-desc">仰向けで股関節・膝を90°に保ち、呼気でリブフレア（肋骨の開き）を閉じる。横隔膜と骨盤底筋の協調を再学習。</div><div class="mdict-ex-rep">10回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">クロコダイルブリージング</div><div class="mdict-ex-desc">うつ伏せで腹部を床に押しつけながら腹式呼吸。横隔膜が360°に展開する感覚を得る。</div><div class="mdict-ex-rep">10呼吸 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== GLUTES =============================== -->
+      <div class="mdict-panel" id="md-glutes">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">GLUTEUS MAXIMUS</div>
+            <div class="mdict-hero-title">大臀筋</div>
+            <div class="mdict-hero-kana">だいでんきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag tag-critical">最重要筋肉No.1</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>後腸骨稜・仙骨後面・尾骨・仙結節靭帯</td></tr>
+              <tr><td>停止</td><td>大腿骨臀筋粗面・腸脛靭帯</td></tr>
+              <tr><td>神経</td><td>下殿神経（L5・S1・S2）</td></tr>
+              <tr><td>主機能</td><td>股関節伸展（最強）・外旋・外転（下部繊維）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">人体最大の筋肉 = 野球の推進力の核心</div><p>投球の軸足蹴り出し・打撃の後ろ足の爆発・スプリントの地面プッシュすべてに大臀筋が主役として関与。研究では大臀筋の出力と球速・バットスピードの間に最も強い相関がある。<strong style="color:var(--white);">「お尻で投げる・打つ」は科学的に正しい表現。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">大臀筋が「眠っている」問題</div><p>現代の座位中心の生活で大臀筋が使われず萎縮・抑制されていることが多い（臀筋健忘症）。スクワットでもお尻ではなく大腿四頭筋だけを使っている選手がいる。プレ・アクティベーション（クラムシェル・グルートブリッジ）で毎日「スイッチ」を入れることが重要。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ヒップスラスト（最重要）</div><div class="mdict-ex-desc">ベンチに背中をつけてバーベルで骨盤を押し上げる。大臀筋の活動量がスクワットより高い。BW×1.5〜2.0を目標に。</div><div class="mdict-ex-rep">6〜8回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">スクワット（フルレンジ）</div><div class="mdict-ex-desc">深く下りるほど大臀筋の関与が増す。膝がつま先方向を向き、ヒップファーストで立ち上がる。BW×1.5が当面の目標。</div><div class="mdict-ex-rep">5〜6回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">グルートブリッジ</div><div class="mdict-ex-desc">仰向けで骨盤を上げる。練習前のアクティベーション種目として毎日行う。お尻を最大収縮させて2秒保持。</div><div class="mdict-ex-rep">15回 × 3セット｜毎日</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== HAMSTRINGS =============================== -->
+      <div class="mdict-panel" id="md-hamstrings">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">HAMSTRINGS</div>
+            <div class="mdict-hero-title">ハムストリングス</div>
+            <div class="mdict-hero-kana">大腿二頭筋・半腱様筋・半膜様筋</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag tag-injury">肉離れNo.1</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>坐骨結節（3筋共通）</td></tr>
+              <tr><td>停止</td><td>脛骨内側（半腱・半膜）・腓骨頭（大腿二頭筋）</td></tr>
+              <tr><td>神経</td><td>坐骨神経（L5・S1・S2）</td></tr>
+              <tr><td>主機能</td><td>膝関節屈曲・股関節伸展（2関節筋）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--green);"><div class="mdict-card-title" style="color:var(--green);">最高速フェーズの推進力の主役</div><p>スプリントの最高速フェーズ（30m以降）でハムストリングスが最大活動。スウィング後半に膝を折りたたみながら地面を押す「プッシュオフ」が走速の決定因子。投球の踏み込み時の股関節伸展でも主役。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">なぜ最も肉離れしやすいのか</div><p>遠心性収縮（伸びながら力を出す）の負荷が最も大きい筋肉。全力疾走の後半に疲労が蓄積した状態で最大遠心力がかかる。<strong style="color:var(--white);">ノルディックハムカールによる偏心強化で肉離れリスクが51%低減（RCT研究）。</strong></p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ノルディックハムカール</div><div class="mdict-ex-desc">膝立ちで足首を固定し、体を前傾させながらゆっくり倒れる。偏心強化の最強種目。最初は腕で着地してよい。週2回で肉離れリスク51%低減。</div><div class="mdict-ex-rep">3〜6回 × 4セット｜週2回</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ルーマニアンデッドリフト（RDL）</div><div class="mdict-ex-desc">膝を軽く曲げたままバーベルを脛に沿わせて下げる。ハムストリングスのストレッチと強化を同時に行える。</div><div class="mdict-ex-rep">8〜10回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">レッグカール</div><div class="mdict-ex-desc">膝関節屈曲の分離強化。マシンで行い可動域全体を使う。ネガティブ（戻す時）をゆっくり行い偏心効果を高める。</div><div class="mdict-ex-rep">10〜12回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== QUADS =============================== -->
+      <div class="mdict-panel" id="md-quads">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">QUADRICEPS FEMORIS</div>
+            <div class="mdict-hero-title">大腿四頭筋</div>
+            <div class="mdict-hero-kana">だいたいしとうきん（4頭）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span></div>
+            <table class="mdict-table">
+              <tr><td>大腿直筋</td><td>下前腸骨棘 → 膝蓋骨（唯一の二関節筋・股関節屈曲も）</td></tr>
+              <tr><td>外側広筋</td><td>大腿骨外側 → 膝蓋骨（最大体積）</td></tr>
+              <tr><td>内側広筋</td><td>大腿骨内側 → 膝蓋骨（膝蓋骨内引き）</td></tr>
+              <tr><td>中間広筋</td><td>大腿骨前面 → 膝蓋骨（深層）</td></tr>
+              <tr><td>主機能</td><td>膝関節伸展（4頭共通）・股関節屈曲（大腿直筋）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">踏み込みと着地の主役</div><p>投球・打撃の踏み込み足が地面に着いてから「壁」を作る局面で大腿四頭筋が等尺性収縮で支持。ジャンプの蹴り出しと着地のクッションも担当。<strong style="color:var(--white);">大腿直筋は二関節筋で股関節屈曲（ステップ動作）にも関与。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">膝蓋腱炎（ジャンパー膝）</div><p>繰り返しのジャンプや全力ダッシュで膝蓋腱（大腿四頭筋の停止腱）に微細損傷が蓄積。成長期の高校生に多い。膝の前面痛・階段昇降時の痛みが初期症状。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">スクワット</div><div class="mdict-ex-desc">大腿四頭筋の基本種目。平行以下の深さで膝が内側に入らないよう注意。BW×1.5が最低限の強さの目標。</div><div class="mdict-ex-rep">5〜8回 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">スプリットスクワット</div><div class="mdict-ex-desc">前後に足を開いて行う。投球・打撃の踏み込み動作に近い片脚支持でバランスと筋力を同時強化。</div><div class="mdict-ex-rep">10回 × 3セット（各脚）</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">レッグプレス</div><div class="mdict-ex-desc">マシンで安全に高重量を扱える。足位置を高くすると大臀筋・ハムスト、低くすると大腿四頭筋の刺激が増す。</div><div class="mdict-ex-rep">8〜12回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== ILIOPSOAS =============================== -->
+      <div class="mdict-panel" id="md-iliopsoas">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">ILIOPSOAS</div>
+            <div class="mdict-hero-title">腸腰筋</div>
+            <div class="mdict-hero-kana">ちょうようきん（大腰筋＋腸骨筋）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag tag-critical">ステップ・走力の要</span></div>
+            <table class="mdict-table">
+              <tr><td>大腰筋</td><td>T12〜L5横突起・椎体 → 大腿骨小転子</td></tr>
+              <tr><td>腸骨筋</td><td>腸骨窩（腸骨内面） → 大腿骨小転子</td></tr>
+              <tr><td>神経</td><td>大腰筋：腰神経叢｜腸骨筋：大腿神経</td></tr>
+              <tr><td>主機能</td><td>股関節屈曲（最強）・体幹屈曲（大腰筋）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">ステップと走力の核心</div><p>投球の踏み込み足の引き出し（膝を前に上げる動作）・打撃のステップ・スプリントの膝引き上げすべてで腸腰筋が主役。<strong style="color:var(--white);">腸腰筋が弱い＝ストライドが短い＝球速が落ちる、という直接的な関係がある。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">硬いと腰椎前彎を増大させる</div><p>座位中心の生活で腸腰筋は短縮しやすい。短縮した腸腰筋は骨盤を前傾させ腰椎の前彎を増大→腰痛の素地を作る。投球前の腸腰筋ストレッチ（ランジ）は必須。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化・柔軟エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ランジ（深いステップ）</div><div class="mdict-ex-desc">後ろ膝を地面近くまで下げるフルランジで腸腰筋のストレッチ＋強化を同時に行う。投球前の必須種目。</div><div class="mdict-ex-rep">10回 × 3セット（各脚）</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ハイニードリル</div><div class="mdict-ex-desc">その場で膝を高く素早く引き上げる。腸腰筋の爆発的収縮を鍛えスプリントのストライドを向上させる。</div><div class="mdict-ex-rep">30秒 × 4セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ハンギングレッグレイズ</div><div class="mdict-ex-desc">ぶら下がり状態で両脚を引き上げる。腸腰筋と腹直筋の複合強化。可動域全体を使い最大収縮させる。</div><div class="mdict-ex-rep">10〜15回 × 3セット</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== GLMED =============================== -->
+      <div class="mdict-panel" id="md-glmed">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">GLUTEUS MEDIUS</div>
+            <div class="mdict-hero-title">中臀筋</div>
+            <div class="mdict-hero-kana">ちゅうでんきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag tag-critical">ACL予防の要</span></div>
+            <table class="mdict-table">
+              <tr><td>起始</td><td>腸骨外面（前上腸骨棘〜後上腸骨棘の間）</td></tr>
+              <tr><td>停止</td><td>大腿骨大転子（外面）</td></tr>
+              <tr><td>神経</td><td>上殿神経（L4・L5・S1）</td></tr>
+              <tr><td>前部繊維</td><td>股関節外転＋内旋</td></tr>
+              <tr><td>後部繊維</td><td>股関節外転＋外旋</td></tr>
+              <tr><td>全体</td><td>片脚支持時の骨盤水平保持（最重要）</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">ACL断裂予防の最重要筋</div><p>着地時に「ニーイン（膝が内側に入る）」するとACL断裂リスクが急増。中臀筋が弱いと片脚着地で骨盤が傾き膝が自動的に内側に入る。<strong style="color:var(--white);">中臀筋強化はACL断裂リスクを50〜88%低減するとされる。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid #6fa8ff;"><div class="mdict-card-title" style="color:#6fa8ff;">投球・走塁での役割</div><p>投球の軸足支持局面で骨盤を水平に保つ。走塁のターンでも片脚支持の安定を担当。中臀筋が弱いと走速が低下し足首・膝への慢性ストレスが増す。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">クラムシェル</div><div class="mdict-ex-desc">横向きで膝を曲げたまま上側の膝を開く。中臀筋の分離活性化の最優先種目。毎日行い「お尻の横」を意識。</div><div class="mdict-ex-rep">20回 × 3セット｜毎日</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">サイドバンドウォーク</div><div class="mdict-ex-desc">ゴムバンドを膝上にかけてカニ歩き。中臀筋の機能的な強化と練習前アクティベーションに最適。</div><div class="mdict-ex-rep">左右各20歩 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">シングルレッグスクワット</div><div class="mdict-ex-desc">片脚スクワット。中臀筋が使えていないとニーインが起きるため、鏡で確認しながら行う。</div><div class="mdict-ex-rep">8〜10回 × 3セット（各脚）</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== ADDUCTORS =============================== -->
+      <div class="mdict-panel" id="md-adductors">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">ADDUCTORS (5 muscles)</div>
+            <div class="mdict-hero-title">内転筋群</div>
+            <div class="mdict-hero-kana">ないてんきんぐん（5筋）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag tag-injury">鼡径部肉離れ</span></div>
+            <table class="mdict-table">
+              <tr><td>大内転筋</td><td>坐骨・恥骨 → 大腿骨内側〜内側上顆（最大）</td></tr>
+              <tr><td>長内転筋</td><td>恥骨前面 → 大腿骨粗線中部</td></tr>
+              <tr><td>短内転筋</td><td>恥骨下枝 → 大腿骨粗線上部</td></tr>
+              <tr><td>薄筋</td><td>恥骨体 → 脛骨内側（鵞足）※二関節筋</td></tr>
+              <tr><td>恥骨筋</td><td>恥骨稜 → 大腿骨恥骨筋線</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--gold);"><div class="mdict-card-title" style="color:var(--gold);">ヒップファーストと「前足の壁」</div><p>打撃のヒップファーストで骨盤を回旋させる時、内転筋群が大臀筋と協働して回転力を生む。踏み込み足の「壁作り」では内転筋群が等尺性収縮で足が外に流れるのを防ぐ。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">鼡径部肉離れの主役</div><p>急激な開脚動作や全力スプリントのターン時に内転筋群の遠心性収縮で過大な張力がかかり肉離れが起きる。コペンハーゲンアダクションによる偏心強化でリスクを大幅低減できる。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">コペンハーゲンアダクション</div><div class="mdict-ex-desc">横向きで上側の足をベンチに乗せ、下側の脚を上側に近づけるように持ち上げる。内転筋の偏心強化で鼡径部障害予防に最も効果的。</div><div class="mdict-ex-rep">6〜8回 × 3セット｜週2〜3回</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">ワイドスクワット（スモウ）</div><div class="mdict-ex-desc">足を大きく開きつま先を外に向けてスクワット。内転筋と大臀筋を同時に鍛えられる。</div><div class="mdict-ex-rep">10〜12回 × 3セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">横ランジ（サイドランジ）</div><div class="mdict-ex-desc">真横に大きく一歩踏み出し、支持脚の股関節を折り込む。内転筋のストレッチ＋強化と股関節可動域向上を同時に行える。</div><div class="mdict-ex-rep">10回 × 3セット（各脚）</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== DEEP HIP ROTATORS =============================== -->
+      <div class="mdict-panel" id="md-deephip">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">DEEP HIP EXTERNAL ROTATORS (6 muscles)</div>
+            <div class="mdict-hero-title">深層外旋6筋</div>
+            <div class="mdict-hero-kana">しんそうがいせん6きん（梨状筋ほか）</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag" style="background:rgba(168,85,247,0.15);color:#c49aff;border:1px solid rgba(168,85,247,0.3);">股関節安定</span></div>
+            <table class="mdict-table">
+              <tr><td>梨状筋</td><td>仙骨前面 → 大腿骨大転子（最大・最重要）</td></tr>
+              <tr><td>内閉鎖筋</td><td>閉鎖孔内面 → 大転子</td></tr>
+              <tr><td>外閉鎖筋</td><td>閉鎖孔外面 → 転子窩</td></tr>
+              <tr><td>上双子筋</td><td>坐骨棘 → 大転子</td></tr>
+              <tr><td>下双子筋</td><td>坐骨結節 → 大転子</td></tr>
+              <tr><td>大腿方形筋</td><td>坐骨結節 → 転子間稜</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid #c49aff;"><div class="mdict-card-title" style="color:#c49aff;">投球・打撃の回転起点</div><p>投球の軸足外旋固定・打撃の後ろ足の骨盤回転起点として機能する。深層外旋6筋が外旋位を固定することで「溜め」が生まれ、そこから骨盤回旋の爆発力が増幅される。</p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">梨状筋症候群と坐骨神経痛</div><p>梨状筋が過緊張すると坐骨神経を圧迫し「梨状筋症候群（偽の坐骨神経痛）」を引き起こす。お尻の奥の鈍痛・脚への放散痛が特徴。ピジョンポーズで毎日ケアが必要。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">ケアと強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">ピジョンポーズ</div><div class="mdict-ex-desc">片脚を前に折り曲げ、もう一方の脚を後方に伸ばして股関節後部を伸ばす。梨状筋・外旋6筋の最強ストレッチ。</div><div class="mdict-ex-rep">60秒 × 3セット（各側）</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">90/90ストレッチ</div><div class="mdict-ex-desc">前後の股関節をともに90°に曲げて座る。外旋と内旋の可動域を同時に改善できる万能種目。</div><div class="mdict-ex-rep">60秒 × 2セット（各側）</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">クラムシェル（外旋強調）</div><div class="mdict-ex-desc">クラムシェルで上側の膝を開く際に「かかとを近づけながら開く」と外旋6筋を選択的に強化できる。</div><div class="mdict-ex-rep">15回 × 3セット（各側）</div></div>
+        </div>
+      </div>
+
+      <!-- =============================== CALF =============================== -->
+      <div class="mdict-panel" id="md-calf">
+        <div class="mdict-hero">
+          <div class="mdict-hero-info">
+            <div class="mdict-hero-en">GASTROCNEMIUS / SOLEUS</div>
+            <div class="mdict-hero-title">腓腹筋・ヒラメ筋</div>
+            <div class="mdict-hero-kana">ひふくきん・ひらめきん</div>
+            <div class="mdict-tags" style="margin-top:10px;"><span class="mdict-tag tag-lower">下半身</span><span class="mdict-tag" style="background:rgba(0,200,150,0.15);color:var(--green);border:1px solid rgba(0,200,150,0.3);">SSC弾性エンジン</span></div>
+            <table class="mdict-table">
+              <tr><td>腓腹筋</td><td>大腿骨内・外側顆 → アキレス腱 → 踵骨（二関節筋）</td></tr>
+              <tr><td>ヒラメ筋</td><td>脛骨・腓骨後面 → アキレス腱 → 踵骨（単関節筋）</td></tr>
+              <tr><td>神経</td><td>脛骨神経（S1・S2）</td></tr>
+              <tr><td>主機能</td><td>足関節底屈・SSCの弾性エネルギー貯蔵・放出</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="mdict-grid">
+          <div class="mdict-card" style="border-left:3px solid var(--green);"><div class="mdict-card-title" style="color:var(--green);">SSCの主役 — スプリント・跳躍の「タダのエネルギー」</div><p>着地の瞬間にアキレス腱が引き伸ばされ弾性エネルギーを蓄積→即座に解放して蹴り出す（SSC）。この弾性反射がスプリントエネルギーの約50%を賄う。<strong style="color:var(--white);">筋力でなく「腱の弾性」が速さと高さを決める。縄跳び・スキップがこの能力を最も効果的に高める。</strong></p></div>
+          <div class="mdict-card" style="border-left:3px solid var(--red);"><div class="mdict-card-title" style="color:var(--red);">アキレス腱炎・足底筋膜炎</div><p>練習量の急増・ウォームアップ不足・シューズ不適合でアキレス腱への過負荷が蓄積。高校生では成長期の腱付着部（踵骨）への骨端炎（セーバー病）も頻発。かかとの痛みは早期に対処すること。</p></div>
+        </div>
+        <h3 style="margin-top:16px;">強化エクササイズ</h3>
+        <div class="mdict-ex-grid">
+          <div class="mdict-ex"><div class="mdict-ex-name">カーフレイズ（片脚）</div><div class="mdict-ex-desc">段差の端に立ちかかとを最大限下げてから上げる。片脚で25回以上が当面の目標。腓腹筋（膝伸展）とヒラメ筋（膝屈曲位）を使い分ける。</div><div class="mdict-ex-rep">10〜15回 × 3セット（各脚）</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">縄跳び（片脚）</div><div class="mdict-ex-desc">SSCの弾性能力を直接鍛える。両脚→片脚と段階的に難度を上げる。接地時間を極限まで短くすることが目標。</div><div class="mdict-ex-rep">30秒 × 6セット</div></div>
+          <div class="mdict-ex"><div class="mdict-ex-name">バウンディング</div><div class="mdict-ex-desc">大股で弾むように走る。腓腹筋・アキレス腱のSSCをスプリントに近い動作で強化。ストライド長の改善に直結。</div><div class="mdict-ex-rep">20〜30m × 4〜6セット</div></div>
+        </div>
+      </div>
+
+    </div><!-- /mdict-content -->
+  </div><!-- /mdict-wrap -->
+
+  <script>
+  function selectMuscle(id, btn) {
+    document.querySelectorAll('.mdict-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mdict-btn').forEach(b => b.classList.remove('active'));
+    const panel = document.getElementById('md-' + id);
+    if (panel) panel.classList.add('active');
+    if (btn) btn.classList.add('active');
+    const content = document.querySelector('.mdict-content');
+    if (content) content.scrollTop = 0;
+  }
+  </script>
+
+</div><!-- /page-muscdict -->
+
 
 
 <!-- ============================================================ -->
@@ -1580,6 +2670,41 @@ header{
               <circle cx="65" cy="355" r="7" fill="rgba(6,214,160,0.7)" stroke="#06d6a0" stroke-width="1.5"/>
               <text x="65" y="359" text-anchor="middle" fill="#0a0e1a" font-size="5">ふくら</text>
             </g>
+            <!-- 追加ドット：前鋸筋 -->
+            <g class="muscle-dot" onclick="showMuscle('serratus')" id="dot-serratus">
+              <circle cx="60" cy="105" r="7" fill="rgba(58,134,255,0.85)" stroke="#3a86ff" stroke-width="1.5"/>
+              <text x="60" y="109" text-anchor="middle" fill="white" font-size="5">前鋸</text>
+            </g>
+            <!-- 追加ドット：三角筋（前面） -->
+            <g class="muscle-dot" onclick="showMuscle('deltoid')" id="dot-deltoid">
+              <circle cx="48" cy="88" r="7" fill="rgba(0,200,150,0.85)" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="48" y="92" text-anchor="middle" fill="#0a0e1a" font-size="5">三角</text>
+            </g>
+            <!-- 追加ドット：腹横筋 -->
+            <g class="muscle-dot" onclick="showMuscle('transverse')" id="dot-transverse">
+              <circle cx="125" cy="148" r="7" fill="rgba(168,85,247,0.85)" stroke="#a855f7" stroke-width="1.5"/>
+              <text x="125" y="152" text-anchor="middle" fill="white" font-size="5">腹横</text>
+            </g>
+            <!-- 追加ドット：腸腰筋 -->
+            <g class="muscle-dot" onclick="showMuscle('iliopsoas')" id="dot-iliopsoas">
+              <circle cx="118" cy="218" r="7" fill="rgba(245,166,35,0.85)" stroke="#f5a623" stroke-width="1.5"/>
+              <text x="118" y="222" text-anchor="middle" fill="#0a0e1a" font-size="5">腸腰</text>
+            </g>
+            <!-- 追加ドット：中臀筋（前面から見える） -->
+            <g class="muscle-dot" onclick="showMuscle('glmed')" id="dot-glmed">
+              <circle cx="65" cy="220" r="7" fill="rgba(230,57,70,0.75)" stroke="#e63946" stroke-width="1.5"/>
+              <text x="65" y="224" text-anchor="middle" fill="white" font-size="5">中臀</text>
+            </g>
+            <!-- 追加ドット：内転筋群 -->
+            <g class="muscle-dot" onclick="showMuscle('adductors')" id="dot-adductors">
+              <circle cx="100" cy="262" r="7" fill="rgba(168,85,247,0.75)" stroke="#a855f7" stroke-width="1.5"/>
+              <text x="100" y="266" text-anchor="middle" fill="white" font-size="5">内転</text>
+            </g>
+            <!-- 追加ドット：上腕三頭筋（前面右） -->
+            <g class="muscle-dot" onclick="showMuscle('tricep')" id="dot-tri-f">
+              <circle cx="155" cy="118" r="7" fill="rgba(6,214,160,0.8)" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="155" y="122" text-anchor="middle" fill="#0a0e1a" font-size="5">三頭</text>
+            </g>
           </svg>
         </div>
       </div>
@@ -1656,6 +2781,36 @@ header{
             <g class="muscle-dot" onclick="showMuscle('calf2')" id="dot-calf-b">
               <circle cx="65" cy="350" r="7" fill="rgba(6,214,160,0.7)" stroke="#06d6a0" stroke-width="1.5"/>
               <text x="65" y="354" text-anchor="middle" fill="#0a0e1a" font-size="5">ふくら</text>
+            </g>
+            <!-- 追加ドット：多裂筋 -->
+            <g class="muscle-dot" onclick="showMuscle('multifidus')" id="dot-multifidus-b">
+              <circle cx="100" cy="168" r="7" fill="rgba(0,200,150,0.85)" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="100" y="172" text-anchor="middle" fill="#0a0e1a" font-size="5">多裂</text>
+            </g>
+            <!-- 追加ドット：腰方形筋 -->
+            <g class="muscle-dot" onclick="showMuscle('ql')" id="dot-ql-b">
+              <circle cx="82" cy="152" r="7" fill="rgba(245,166,35,0.85)" stroke="#f5a623" stroke-width="1.5"/>
+              <text x="82" y="156" text-anchor="middle" fill="#0a0e1a" font-size="5">腰方</text>
+            </g>
+            <!-- 追加ドット：深層外旋6筋 -->
+            <g class="muscle-dot" onclick="showMuscle('deephip')" id="dot-deephip-b">
+              <circle cx="118" cy="228" r="7" fill="rgba(168,85,247,0.85)" stroke="#a855f7" stroke-width="1.5"/>
+              <text x="118" y="232" text-anchor="middle" fill="white" font-size="5">外旋</text>
+            </g>
+            <!-- 追加ドット：中臀筋（背面） -->
+            <g class="muscle-dot" onclick="showMuscle('glmed')" id="dot-glmed-b">
+              <circle cx="68" cy="205" r="7" fill="rgba(230,57,70,0.75)" stroke="#e63946" stroke-width="1.5"/>
+              <text x="68" y="209" text-anchor="middle" fill="white" font-size="5">中臀</text>
+            </g>
+            <!-- 追加ドット：三角筋後部 -->
+            <g class="muscle-dot" onclick="showMuscle('deltoid')" id="dot-deltoid-b">
+              <circle cx="152" cy="88" r="7" fill="rgba(0,200,150,0.85)" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="152" y="92" text-anchor="middle" fill="#0a0e1a" font-size="5">三角</text>
+            </g>
+            <!-- 追加ドット：大腿二頭筋（ハムスト右） -->
+            <g class="muscle-dot" onclick="showMuscle('ham')" id="dot-ham-r-b">
+              <circle cx="128" cy="272" r="7" fill="rgba(245,166,35,0.8)" stroke="#f5a623" stroke-width="1.5"/>
+              <text x="128" y="276" text-anchor="middle" fill="#0a0e1a" font-size="5">ハムスト</text>
             </g>
           </svg>
         </div>
@@ -2536,8 +3691,61 @@ header{
       <h2 class="sh-blue">⛓️ 投球の力の伝達経路（キネティックチェーン）</h2>
       <div class="section-sub">下から上へ — エネルギーは「地面」から始まり「指先」で終わる</div>
       <div class="info-box ib-blue" style="margin-top:12px;">
-        <div class="ib-title">🔑 球速の内訳</div>
-        <p>研究によれば球速の貢献度は：<strong style="color:#6fa8ff;">下半身（大臀筋・ハム・腸腰筋）約35%</strong> + <strong style="color:var(--gold);">体幹回旋（腹斜筋・広背筋）約22%</strong> + <strong style="color:var(--green);">肩・腕（ローテーターカフ・三頭筋）約36%</strong> + <strong style="color:var(--gray);">手首・指先 約7%</strong>。つまり下半身と体幹で57%を生み出す。</p>
+        <div class="ib-title">🔑 球速の内訳 — どこから球速は生まれるか</div>
+      </div>
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;margin-top:14px;background:var(--navy3);border-radius:12px;padding:20px;">
+        <!-- Donut Chart SVG -->
+        <div style="text-align:center;">
+          <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- 下半身 35% -->
+            <path d="M90,90 L90,18 A72,72 0 0,1 153.6,126" fill="none" stroke="#06d6a0" stroke-width="32" stroke-dasharray="158.3 294.7" stroke-dashoffset="0" transform="rotate(-90 90 90)"/>
+            <!-- 肩腕 36% -->
+            <circle cx="90" cy="90" r="56" fill="none" stroke="#3a86ff" stroke-width="32" stroke-dasharray="126.7 326.3" stroke-dashoffset="-156.3" transform="rotate(-90 90 90)"/>
+            <!-- 体幹 22% -->
+            <circle cx="90" cy="90" r="56" fill="none" stroke="#f5a623" stroke-width="32" stroke-dasharray="77.3 375.7" stroke-dashoffset="-283" transform="rotate(-90 90 90)"/>
+            <!-- 手首指先 7% -->
+            <circle cx="90" cy="90" r="56" fill="none" stroke="#8892a4" stroke-width="32" stroke-dasharray="24.6 428.4" stroke-dashoffset="-360.3" transform="rotate(-90 90 90)"/>
+            <!-- Center -->
+            <circle cx="90" cy="90" r="38" fill="#1c2540"/>
+            <text x="90" y="86" text-anchor="middle" fill="#f0f4ff" font-size="13" font-family="Bebas Neue,sans-serif" letter-spacing="1">BALL</text>
+            <text x="90" y="100" text-anchor="middle" fill="#f0f4ff" font-size="13" font-family="Bebas Neue,sans-serif" letter-spacing="1">SPEED</text>
+          </svg>
+        </div>
+        <!-- Legend -->
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:14px;height:14px;border-radius:3px;background:#06d6a0;flex-shrink:0;"></div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#06d6a0;">下半身 35%</div>
+              <div style="font-size:11px;color:var(--gray);">大臀筋・ハムスト・腸腰筋</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:14px;height:14px;border-radius:3px;background:#3a86ff;flex-shrink:0;"></div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#6fa8ff;">肩・腕 36%</div>
+              <div style="font-size:11px;color:var(--gray);">ローテーターカフ・三頭筋</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:14px;height:14px;border-radius:3px;background:#f5a623;flex-shrink:0;"></div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--gold);">体幹回旋 22%</div>
+              <div style="font-size:11px;color:var(--gray);">腹斜筋・広背筋</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:14px;height:14px;border-radius:3px;background:#8892a4;flex-shrink:0;"></div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--gray);">手首・指先 7%</div>
+              <div style="font-size:11px;color:var(--gray);">スナップ・球種制御</div>
+            </div>
+          </div>
+          <div style="margin-top:6px;padding:8px 12px;background:rgba(245,166,35,0.1);border-radius:6px;border-left:3px solid var(--gold);">
+            <div style="font-size:11px;color:var(--gold);font-weight:700;">💡 下半身＋体幹で57%！</div>
+            <div style="font-size:11px;color:#b0bbc8;">「腕で投げる」は損。体全体で投げることが球速向上の最短ルート。</div>
+          </div>
+        </div>
       </div>
       <div class="kinetic-chain" style="margin-top:16px;">
         <div class="kc-node"><div class="kc-circle" style="background:rgba(6,214,160,0.15);border-color:var(--green);color:var(--green);font-size:9px;">地面反力</div><div class="kc-label">軸足</div></div>
@@ -2557,7 +3765,249 @@ header{
     <!-- 6フェーズ詳細 -->
     <div class="section">
       <div class="section-accent acc-gold"></div>
-      <h2 class="sh-gold">📋 6フェーズ 完全解説</h2>
+      <h2 class="sh-gold">📋 投球フォーム 6フェーズ完全解説</h2>
+      <!-- 投球フェーズ 人体SVG図解 -->
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto;">
+        <div style="font-size:11px;font-weight:700;color:var(--gray);text-align:center;margin-bottom:14px;letter-spacing:1px;">PITCHING PHASES — 投球動作の流れ</div>
+        <svg width="100%" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg" style="min-width:600px;display:block;">
+          <!-- Phase labels top -->
+          <text x="57" y="14" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 1</text>
+          <text x="57" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">ワインドアップ</text>
+          <text x="170" y="14" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 2</text>
+          <text x="170" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">ストライド</text>
+          <text x="283" y="14" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 3</text>
+          <text x="283" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">アーリーコッキング</text>
+          <text x="397" y="14" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 4</text>
+          <text x="397" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">レイトコッキング</text>
+          <text x="510" y="14" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 5</text>
+          <text x="510" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">アクセラレーション</text>
+          <text x="623" y="14" text-anchor="middle" fill="#e63946" font-size="9" font-family="Bebas Neue,sans-serif">PHASE 6</text>
+          <text x="623" y="24" text-anchor="middle" fill="#b0bbc8" font-size="8" font-family="Noto Sans JP,sans-serif">フォロースルー</text>
+          <!-- Dividers -->
+          <line x1="113" y1="30" x2="113" y2="155" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="226" y1="30" x2="226" y2="155" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="340" y1="30" x2="340" y2="155" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="453" y1="30" x2="453" y2="155" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="566" y1="30" x2="566" y2="155" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- PHASE 1: ワインドアップ — 軸足1本立ち -->
+          <ellipse cx="57" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#06d6a0" stroke-width="1.5"/>
+          <line x1="57" y1="61" x2="57" y2="95" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="57" y1="70" x2="42" y2="82" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="57" y1="70" x2="72" y2="65" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="57" y1="95" x2="57" y2="130" stroke="#06d6a0" stroke-width="2"/>
+          <!-- 膝上げ -->
+          <line x1="57" y1="95" x2="70" y2="112" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="70" y1="112" x2="65" y2="130" stroke="#06d6a0" stroke-width="2" stroke-dasharray="3,2" opacity="0.5"/>
+          <ellipse cx="65" cy="108" rx="6" ry="5" fill="rgba(6,214,160,0.15)" stroke="#06d6a0" stroke-width="1"/>
+          <text x="57" y="148" text-anchor="middle" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">軸足支持</text>
+          <!-- PHASE 2: ストライド -->
+          <ellipse cx="170" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#6fa8ff" stroke-width="1.5"/>
+          <line x1="170" y1="61" x2="170" y2="93" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="170" y1="73" x2="155" y2="83" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="170" y1="73" x2="185" y2="68" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="170" y1="93" x2="155" y2="125" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="170" y1="93" x2="190" y2="120" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="155" y1="125" x2="152" y2="140" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="190" y1="120" x2="193" y2="140" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="148" y1="140" x2="158" y2="140" stroke="#6fa8ff" stroke-width="2"/>
+          <!-- arrow forward -->
+          <path d="M195,100 L210,100 L206,96 M210,100 L206,104" fill="none" stroke="#6fa8ff" stroke-width="1.5"/>
+          <text x="170" y="148" text-anchor="middle" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">踏み出し</text>
+          <!-- PHASE 3: アーリーコッキング — 骨盤先行 -->
+          <ellipse cx="283" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#6fa8ff" stroke-width="1.5"/>
+          <line x1="283" y1="61" x2="280" y2="95" stroke="#6fa8ff" stroke-width="2"/>
+          <!-- 腕引き -->
+          <line x1="280" y1="73" x2="262" y2="85" stroke="#6fa8ff" stroke-width="2"/>
+          <circle cx="260" cy="87" r="4" fill="rgba(58,134,255,0.3)" stroke="#6fa8ff" stroke-width="1"/>
+          <line x1="280" y1="73" x2="298" y2="82" stroke="#6fa8ff" stroke-width="2"/>
+          <!-- 骨盤回旋 矢印 -->
+          <path d="M270,93 Q278,88 285,93" fill="none" stroke="#f5a623" stroke-width="1.5"/>
+          <path d="M285,93 L282,89 M285,93 L289,90" fill="none" stroke="#f5a623" stroke-width="1.5"/>
+          <line x1="280" y1="95" x2="267" y2="125" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="280" y1="95" x2="298" y2="122" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="267" y1="125" x2="263" y2="140" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="298" y1="122" x2="301" y2="140" stroke="#6fa8ff" stroke-width="2"/>
+          <text x="283" y="148" text-anchor="middle" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">ヒップファースト</text>
+          <!-- PHASE 4: レイトコッキング — 腕最大外旋 -->
+          <ellipse cx="397" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#f5a623" stroke-width="1.5"/>
+          <line x1="397" y1="61" x2="393" y2="95" stroke="#f5a623" stroke-width="2"/>
+          <!-- 腕最大外旋 -->
+          <line x1="393" y1="72" x2="370" y2="65" stroke="#f5a623" stroke-width="2"/>
+          <circle cx="368" cy="64" r="5" fill="rgba(245,166,35,0.3)" stroke="#f5a623" stroke-width="1.5"/>
+          <line x1="393" y1="72" x2="415" y2="78" stroke="#f5a623" stroke-width="2"/>
+          <!-- max外旋強調 -->
+          <path d="M362,58 Q368,52 375,58" fill="none" stroke="#e63946" stroke-width="1.5"/>
+          <text x="362" y="55" text-anchor="middle" fill="#e63946" font-size="7" font-family="Noto Sans JP,sans-serif">MAX外旋</text>
+          <line x1="393" y1="95" x2="380" y2="125" stroke="#f5a623" stroke-width="2"/>
+          <line x1="393" y1="95" x2="410" y2="122" stroke="#f5a623" stroke-width="2"/>
+          <line x1="380" y1="125" x2="376" y2="140" stroke="#f5a623" stroke-width="2"/>
+          <line x1="410" y1="122" x2="413" y2="140" stroke="#f5a623" stroke-width="2"/>
+          <text x="397" y="148" text-anchor="middle" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">最大コッキング</text>
+          <!-- PHASE 5: アクセラレーション -->
+          <ellipse cx="510" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#06d6a0" stroke-width="1.5"/>
+          <line x1="510" y1="61" x2="506" y2="95" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="506" y1="72" x2="482" y2="60" stroke="#06d6a0" stroke-width="2"/>
+          <!-- 腕加速矢印 -->
+          <path d="M482,60 L468,55 L472,51 M468,55 L472,59" fill="none" stroke="#06d6a0" stroke-width="2"/>
+          <circle cx="466" cy="55" r="5" fill="rgba(6,214,160,0.4)" stroke="#06d6a0" stroke-width="1.5"/>
+          <line x1="506" y1="72" x2="528" y2="78" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="506" y1="95" x2="490" y2="125" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="506" y1="95" x2="524" y2="122" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="490" y1="125" x2="486" y2="140" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="524" y1="122" x2="527" y2="140" stroke="#06d6a0" stroke-width="2"/>
+          <text x="510" y="148" text-anchor="middle" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">リリース!</text>
+          <!-- PHASE 6: フォロースルー -->
+          <ellipse cx="623" cy="50" rx="10" ry="11" fill="#1c2540" stroke="#e63946" stroke-width="1.5"/>
+          <line x1="623" y1="61" x2="615" y2="95" stroke="#e63946" stroke-width="2"/>
+          <!-- 腕フォロー -->
+          <line x1="615" y1="72" x2="598" y2="88" stroke="#e63946" stroke-width="2"/>
+          <line x1="615" y1="72" x2="640" y2="95" stroke="#e63946" stroke-width="2"/>
+          <!-- フォロー矢印 -->
+          <path d="M640,95 Q650,105 640,112" fill="none" stroke="#e63946" stroke-width="1.5"/>
+          <path d="M640,112 L636,108 M640,112 L644,108" fill="none" stroke="#e63946" stroke-width="1"/>
+          <line x1="615" y1="95" x2="600" y2="125" stroke="#e63946" stroke-width="2"/>
+          <line x1="615" y1="95" x2="632" y2="122" stroke="#e63946" stroke-width="2"/>
+          <line x1="600" y1="125" x2="596" y2="140" stroke="#e63946" stroke-width="2"/>
+          <line x1="632" y1="122" x2="635" y2="140" stroke="#e63946" stroke-width="2"/>
+          <text x="623" y="148" text-anchor="middle" fill="#e63946" font-size="8" font-family="Noto Sans JP,sans-serif">制動・減速</text>
+          <!-- Ground line -->
+          <line x1="10" y1="142" x2="668" y2="142" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        </svg>
+        <div style="font-size:10px;color:var(--gray);text-align:center;margin-top:8px;">⚠️ フォロースルーが短いと肩・肘が制動力を代償して障害リスクが急増する</div>
+      </div>
+
+      <!-- フェーズ進行バー -->
+      <div style="display:flex;gap:2px;margin:14px 0;overflow-x:auto;">
+        <div style="flex:1;min-width:70px;background:rgba(6,214,160,0.15);border:1px solid rgba(6,214,160,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--green);">1</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">ワインド<br>アップ</div>
+        </div>
+        <div style="flex:1;min-width:70px;background:rgba(58,134,255,0.15);border:1px solid rgba(58,134,255,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:#6fa8ff;">2</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">ストライド<br>踏み出し</div>
+        </div>
+        <div style="flex:1;min-width:70px;background:rgba(58,134,255,0.15);border:1px solid rgba(58,134,255,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:#6fa8ff;">3</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">アーリー<br>コッキング</div>
+        </div>
+        <div style="flex:1;min-width:70px;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--gold);">4</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">レイト<br>コッキング</div>
+        </div>
+        <div style="flex:1;min-width:70px;background:rgba(0,200,150,0.15);border:1px solid rgba(0,200,150,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--green);">5</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">アクセラ<br>レーション</div>
+        </div>
+        <div style="flex:1;min-width:70px;background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.4);border-radius:6px;padding:8px 4px;text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--red);">6</div>
+          <div style="font-size:9px;color:var(--gray);line-height:1.4;">フォロー<br>スルー</div>
+        </div>
+      </div>
+      <!-- 投球フォームSVG概略図 -->
+      <div style="background:var(--navy3);border-radius:10px;padding:16px;margin-bottom:16px;overflow-x:auto;">
+        <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1px;margin-bottom:10px;text-align:center;">PITCHING MECHANICS — SIDE VIEW</div>
+        <svg width="100%" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="max-width:700px;display:block;margin:0 auto;">
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#f5a623"/></marker>
+          </defs>
+          <!-- Ground line -->
+          <line x1="20" y1="140" x2="680" y2="140" stroke="#2d3a5a" stroke-width="1.5"/>
+          
+          <!-- Phase labels -->
+          <text x="58" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">①</text>
+          <text x="158" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">②</text>
+          <text x="258" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">③</text>
+          <text x="358" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">④</text>
+          <text x="458" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">⑤</text>
+          <text x="558" y="155" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">⑥</text>
+
+          <!-- Phase dividers -->
+          <line x1="108" y1="20" x2="108" y2="140" stroke="#2d3a5a" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="208" y1="20" x2="208" y2="140" stroke="#2d3a5a" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="308" y1="20" x2="308" y2="140" stroke="#2d3a5a" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="408" y1="20" x2="408" y2="140" stroke="#2d3a5a" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="508" y1="20" x2="508" y2="140" stroke="#2d3a5a" stroke-width="1" stroke-dasharray="3,3"/>
+
+          <!-- ① Windup: stick figure balanced on one leg -->
+          <circle cx="58" cy="52" r="10" fill="none" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="58" y1="62" x2="58" y2="98" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="58" y1="75" x2="42" y2="88" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="58" y1="75" x2="74" y2="70" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="58" y1="98" x2="52" y2="120" stroke="#06d6a0" stroke-width="2"/>
+          <!-- lifted knee -->
+          <line x1="58" y1="98" x2="72" y2="115" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="72" y1="115" x2="66" y2="128" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="52" y1="120" x2="52" y2="138" stroke="#06d6a0" stroke-width="2"/>
+
+          <!-- ② Stride -->
+          <circle cx="158" cy="50" r="10" fill="none" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="158" y1="60" x2="150" y2="95" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="158" y1="72" x2="140" y2="82" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="158" y1="72" x2="176" y2="68" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="150" y1="95" x2="132" y2="128" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="150" y1="95" x2="176" y2="120" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="132" y1="128" x2="130" y2="138" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="176" y1="120" x2="178" y2="138" stroke="#6fa8ff" stroke-width="2"/>
+
+          <!-- ③ Early Cocking - arm going back -->
+          <circle cx="258" cy="48" r="10" fill="none" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="258" y1="58" x2="248" y2="93" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="258" y1="68" x2="236" y2="60" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="258" y1="68" x2="280" y2="58" stroke="#6fa8ff" stroke-width="2"/>
+          <!-- arm going back -->
+          <line x1="236" y1="60" x2="222" y2="50" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="248" y1="93" x2="228" y2="125" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="248" y1="93" x2="278" y2="118" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="228" y1="125" x2="226" y2="138" stroke="#6fa8ff" stroke-width="2"/>
+          <line x1="278" y1="118" x2="280" y2="138" stroke="#6fa8ff" stroke-width="2"/>
+
+          <!-- ④ Late Cocking - arm fully back -->
+          <circle cx="358" cy="46" r="10" fill="none" stroke="#f5a623" stroke-width="2"/>
+          <line x1="358" y1="56" x2="346" y2="92" stroke="#f5a623" stroke-width="2"/>
+          <line x1="358" y1="66" x2="332" y2="58" stroke="#f5a623" stroke-width="2"/>
+          <line x1="358" y1="66" x2="382" y2="56" stroke="#f5a623" stroke-width="2"/>
+          <!-- fully cocked arm -->
+          <line x1="332" y1="58" x2="318" y2="44" stroke="#f5a623" stroke-width="2.5"/>
+          <line x1="318" y1="44" x2="310" y2="52" stroke="#f5a623" stroke-width="2"/>
+          <line x1="346" y1="92" x2="326" y2="124" stroke="#f5a623" stroke-width="2"/>
+          <line x1="346" y1="92" x2="376" y2="116" stroke="#f5a623" stroke-width="2"/>
+          <line x1="326" y1="124" x2="324" y2="138" stroke="#f5a623" stroke-width="2"/>
+          <line x1="376" y1="116" x2="378" y2="138" stroke="#f5a623" stroke-width="2"/>
+          <!-- Shoulder stress indicator -->
+          <circle cx="332" cy="58" r="5" fill="rgba(230,57,70,0.4)" stroke="#e63946" stroke-width="1.5"/>
+          <text x="322" y="42" fill="#e63946" font-size="8" font-family="Noto Sans JP,sans-serif">負荷MAX</text>
+
+          <!-- ⑤ Acceleration - release -->
+          <circle cx="458" cy="44" r="10" fill="none" stroke="#06d6a0" stroke-width="2.5"/>
+          <line x1="458" y1="54" x2="446" y2="90" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="458" y1="64" x2="434" y2="56" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="458" y1="64" x2="484" y2="58" stroke="#06d6a0" stroke-width="2"/>
+          <!-- arm extending forward -->
+          <line x1="484" y1="58" x2="504" y2="48" stroke="#06d6a0" stroke-width="2.5"/>
+          <circle cx="510" cy="46" r="5" fill="#06d6a0" opacity="0.8"/>
+          <!-- speed arrows -->
+          <line x1="514" y1="46" x2="528" y2="40" stroke="#f5a623" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="514" y1="46" x2="530" y2="46" stroke="#f5a623" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="514" y1="46" x2="528" y2="52" stroke="#f5a623" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="446" y1="90" x2="426" y2="122" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="446" y1="90" x2="476" y2="114" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="426" y1="122" x2="424" y2="138" stroke="#06d6a0" stroke-width="2"/>
+          <line x1="476" y1="114" x2="478" y2="138" stroke="#06d6a0" stroke-width="2"/>
+
+          <!-- ⑥ Follow through -->
+          <circle cx="558" cy="46" r="10" fill="none" stroke="#e63946" stroke-width="2"/>
+          <line x1="558" y1="56" x2="542" y2="90" stroke="#e63946" stroke-width="2"/>
+          <line x1="558" y1="68" x2="536" y2="80" stroke="#e63946" stroke-width="2"/>
+          <!-- arm follow through downward -->
+          <line x1="536" y1="80" x2="524" y2="100" stroke="#e63946" stroke-width="2"/>
+          <line x1="558" y1="68" x2="582" y2="72" stroke="#e63946" stroke-width="2"/>
+          <line x1="542" y1="90" x2="522" y2="118" stroke="#e63946" stroke-width="2"/>
+          <line x1="542" y1="90" x2="572" y2="112" stroke="#e63946" stroke-width="2"/>
+          <line x1="522" y1="118" x2="520" y2="138" stroke="#e63946" stroke-width="2"/>
+          <line x1="572" y1="112" x2="574" y2="138" stroke="#e63946" stroke-width="2"/>
+          <text x="548" y="36" fill="#e63946" font-size="8">制動！</text>
+        </svg>
+      </div>
       <div class="phase-timeline">
 
         <!-- Phase 1 -->
@@ -2717,6 +4167,104 @@ header{
     <div class="section">
       <div class="section-accent acc-gold"></div>
       <h2 class="sh-gold">📋 7フェーズ 完全解説</h2>
+      <!-- 打撃スウィング軌道 SVG -->
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;color:var(--gray);text-align:center;margin-bottom:14px;letter-spacing:1px;">BATTING SWING PATH — スウィングの軌道と体の動き</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
+          <!-- Left: Body rotation diagram -->
+          <div style="text-align:center;">
+            <div style="font-size:10px;color:var(--gold);font-weight:700;margin-bottom:8px;">骨盤と肩のセパレーション</div>
+            <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ground -->
+              <line x1="20" y1="158" x2="160" y2="158" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Batter silhouette -->
+              <!-- Head -->
+              <circle cx="90" cy="35" r="12" fill="#1c2540" stroke="#6fa8ff" stroke-width="1.5"/>
+              <!-- Body -->
+              <line x1="90" y1="47" x2="90" y2="100" stroke="#6fa8ff" stroke-width="2.5"/>
+              <!-- Hips (rotated forward) -->
+              <line x1="72" y1="90" x2="108" y2="84" stroke="#f5a623" stroke-width="3"/>
+              <circle cx="72" cy="90" r="4" fill="rgba(245,166,35,0.3)" stroke="#f5a623" stroke-width="1.5"/>
+              <circle cx="108" cy="84" r="4" fill="rgba(245,166,35,0.3)" stroke="#f5a623" stroke-width="1.5"/>
+              <!-- Shoulders (still closed) -->
+              <line x1="70" y1="65" x2="110" y2="65" stroke="#6fa8ff" stroke-width="3"/>
+              <circle cx="70" cy="65" r="4" fill="rgba(58,134,255,0.3)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <circle cx="110" cy="65" r="4" fill="rgba(58,134,255,0.3)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <!-- Separation angle arc -->
+              <path d="M90,78 Q100,72 100,84" fill="none" stroke="#e63946" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="105" y="77" fill="#e63946" font-size="8" font-family="Noto Sans JP,sans-serif">差=40〜60°</text>
+              <!-- Legs -->
+              <line x1="90" y1="100" x2="75" y2="135" stroke="#6fa8ff" stroke-width="2"/>
+              <line x1="90" y1="100" x2="110" y2="132" stroke="#6fa8ff" stroke-width="2"/>
+              <line x1="75" y1="135" x2="70" y2="158" stroke="#6fa8ff" stroke-width="2"/>
+              <line x1="110" y1="132" x2="115" y2="158" stroke="#6fa8ff" stroke-width="2"/>
+              <!-- Hip rotation arrow -->
+              <path d="M55,95 Q60,80 72,90" fill="none" stroke="#f5a623" stroke-width="2"/>
+              <path d="M55,95 L58,90 M55,95 L51,92" fill="none" stroke="#f5a623" stroke-width="1.5"/>
+              <text x="38" y="83" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">骨盤</text>
+              <text x="38" y="93" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">先行!</text>
+              <!-- Labels -->
+              <text x="90" y="170" text-anchor="middle" fill="#b0bbc8" font-size="9" font-family="Noto Sans JP,sans-serif">ヒップファースト — 上半身を置き去りに</text>
+            </svg>
+          </div>
+          <!-- Right: Swing path diagram -->
+          <div style="text-align:center;">
+            <div style="font-size:10px;color:var(--blue);font-weight:700;margin-bottom:8px;">バットスウィング軌道（上から見た図）</div>
+            <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+              <!-- Home plate -->
+              <polygon points="90,155 105,145 105,130 75,130 75,145" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <text x="90" y="142" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Noto Sans JP,sans-serif">本塁</text>
+              <!-- Pitcher direction -->
+              <text x="90" y="22" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">投手方向</text>
+              <path d="M90,28 L90,38" stroke="var(--gray)" stroke-width="1" marker-end="none"/>
+              <!-- Inside out swing path (correct) -->
+              <path d="M65,120 Q75,95 120,72" fill="none" stroke="#06d6a0" stroke-width="3" stroke-linecap="round"/>
+              <path d="M120,72 L115,68 M120,72 L117,77" fill="none" stroke="#06d6a0" stroke-width="2"/>
+              <text x="130" y="68" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">インサイド</text>
+              <text x="130" y="78" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">アウト✅</text>
+              <!-- Cast swing path (wrong) -->
+              <path d="M65,120 Q45,85 100,65" fill="none" stroke="rgba(230,57,70,0.6)" stroke-width="2" stroke-dasharray="4,3"/>
+              <text x="22" y="75" fill="rgba(230,57,70,0.8)" font-size="8" font-family="Noto Sans JP,sans-serif">カスト</text>
+              <text x="22" y="85" fill="rgba(230,57,70,0.8)" font-size="8" font-family="Noto Sans JP,sans-serif">NG❌</text>
+              <!-- Impact zone -->
+              <ellipse cx="95" cy="100" rx="18" ry="10" fill="rgba(245,166,35,0.15)" stroke="#f5a623" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="95" y="98" text-anchor="middle" fill="#f5a623" font-size="7" font-family="Noto Sans JP,sans-serif">インパクト</text>
+              <text x="95" y="108" text-anchor="middle" fill="#f5a623" font-size="7" font-family="Noto Sans JP,sans-serif">ゾーン</text>
+              <!-- Batter position -->
+              <circle cx="65" cy="120" r="7" fill="rgba(58,134,255,0.3)" stroke="#6fa8ff" stroke-width="1.5"/>
+              <text x="50" y="118" text-anchor="middle" fill="#6fa8ff" font-size="7" font-family="Noto Sans JP,sans-serif">打者</text>
+            </svg>
+          </div>
+        </div>
+        <!-- Phase contribution bars -->
+        <div style="margin-top:16px;">
+          <div style="font-size:10px;font-weight:700;color:var(--gray);margin-bottom:8px;letter-spacing:0.5px;">バットスピードへの各部位の貢献度</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:80px;font-size:11px;color:#b0bbc8;flex-shrink:0;">下半身・骨盤</div>
+              <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;">
+                <div style="width:45%;height:100%;background:linear-gradient(to right,#f5a623,#06d6a0);border-radius:5px;"></div>
+              </div>
+              <div style="width:30px;font-family:'Bebas Neue',sans-serif;font-size:13px;color:#f5a623;">45%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:80px;font-size:11px;color:#b0bbc8;flex-shrink:0;">体幹回旋</div>
+              <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;">
+                <div style="width:25%;height:100%;background:linear-gradient(to right,#a855f7,#3a86ff);border-radius:5px;"></div>
+              </div>
+              <div style="width:30px;font-family:'Bebas Neue',sans-serif;font-size:13px;color:#a855f7;">25%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:80px;font-size:11px;color:#b0bbc8;flex-shrink:0;">腕・手首</div>
+              <div style="flex:1;height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;">
+                <div style="width:30%;height:100%;background:linear-gradient(to right,#3a86ff,#06d6a0);border-radius:5px;"></div>
+              </div>
+              <div style="width:30px;font-family:'Bebas Neue',sans-serif;font-size:13px;color:#6fa8ff;">30%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="phase-timeline">
 
         <div class="pt-step">
@@ -2842,9 +4390,58 @@ header{
     <!-- スプリント全体像 -->
     <div class="section">
       <div class="section-accent acc-green"></div>
-      <h2 class="sh-green">🧠 スプリントの物理と生理学</h2>
-      <div class="section-sub">「速く走る」を科学的に分解する</div>
-      <div class="info-box ib-green">
+      <h2 class="sh-green">🏃 速く走るための2要素 — 視覚的に理解する</h2>
+      <div class="section-sub">速度 ＝ ストライド長 × ストライド頻度。この2つを同時に伸ばす</div>
+
+      <!-- Sprint factors visual -->
+      <div style="background:var(--navy3);border-radius:12px;padding:18px;margin-top:14px;">
+        <svg width="100%" viewBox="0 0 580 130" xmlns="http://www.w3.org/2000/svg" style="max-width:580px;display:block;margin:0 auto;">
+          <!-- Left side: stride length -->
+          <rect x="10" y="15" width="250" height="100" rx="8" fill="rgba(6,214,160,0.06)" stroke="rgba(6,214,160,0.3)" stroke-width="1.5"/>
+          <text x="135" y="35" text-anchor="middle" fill="#06d6a0" font-size="12" font-family="Noto Sans JP,sans-serif" font-weight="bold">ストライド長</text>
+          <text x="135" y="50" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">1歩の距離（cm）</text>
+          <!-- Footsteps for stride length -->
+          <ellipse cx="40" cy="90" rx="12" ry="7" fill="rgba(6,214,160,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+          <ellipse cx="80" cy="80" rx="12" ry="7" fill="rgba(6,214,160,0.4)" stroke="#06d6a0" stroke-width="1.5"/>
+          <ellipse cx="135" cy="90" rx="12" ry="7" fill="rgba(6,214,160,0.5)" stroke="#06d6a0" stroke-width="1.5"/>
+          <ellipse cx="190" cy="80" rx="12" ry="7" fill="rgba(6,214,160,0.6)" stroke="#06d6a0" stroke-width="1.5"/>
+          <ellipse cx="240" cy="90" rx="12" ry="7" fill="rgba(6,214,160,0.7)" stroke="#06d6a0" stroke-width="1.5"/>
+          <!-- Double arrow for stride -->
+          <line x1="40" y1="68" x2="135" y2="68" stroke="#06d6a0" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="87" y="64" text-anchor="middle" fill="#4dffcc" font-size="9">1ストライド</text>
+          <!-- Factors for stride -->
+          <text x="135" y="115" text-anchor="middle" fill="#b0bbc8" font-size="9" font-family="Noto Sans JP,sans-serif">大臀筋・ハムスト・腸腰筋の強さ</text>
+
+          <!-- Multiplication sign -->
+          <text x="290" y="80" text-anchor="middle" fill="#f5a623" font-size="28" font-family="Bebas Neue,sans-serif">×</text>
+
+          <!-- Right side: stride frequency -->
+          <rect x="320" y="15" width="250" height="100" rx="8" fill="rgba(58,134,255,0.06)" stroke="rgba(58,134,255,0.3)" stroke-width="1.5"/>
+          <text x="445" y="35" text-anchor="middle" fill="#6fa8ff" font-size="12" font-family="Noto Sans JP,sans-serif" font-weight="bold">ストライド頻度</text>
+          <text x="445" y="50" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">1秒間の歩数（歩/秒）</text>
+          <!-- Quick footsteps for frequency -->
+          <ellipse cx="340" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.4)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="360" cy="80" rx="9" ry="5" fill="rgba(58,134,255,0.5)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="380" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.5)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="400" cy="80" rx="9" ry="5" fill="rgba(58,134,255,0.6)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="420" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.6)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="440" cy="80" rx="9" ry="5" fill="rgba(58,134,255,0.7)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="460" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.7)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="480" cy="80" rx="9" ry="5" fill="rgba(58,134,255,0.8)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="500" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.8)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <ellipse cx="552" cy="88" rx="9" ry="5" fill="rgba(58,134,255,0.9)" stroke="#6fa8ff" stroke-width="1.5"/>
+          <text x="445" y="115" text-anchor="middle" fill="#b0bbc8" font-size="9" font-family="Noto Sans JP,sans-serif">神経系・SSC・腸腰筋の引き出し速度</text>
+        </svg>
+        <div style="text-align:center;margin-top:10px;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#06d6a0;">ストライド長 </span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);"> × </span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:#6fa8ff;">ストライド頻度 </span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);"> = </span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--white);">スプリント速度</span>
+        </div>
+      </div>
+
+      <div class="info-box ib-green" style="margin-top:14px;">
         <div class="ib-title">⚡ スプリント速度を決める2つの要素</div>
         <p><strong style="color:var(--green);">速度 ＝ ストライド長（1歩の距離）× ストライド頻度（1秒間の歩数）</strong><br>
         例：身長175cmの選手が30mを3.7秒で走る場合、ストライド長 約1.8m × ストライド頻度 約4.5歩/秒。ストライド長を10cm伸ばすか、頻度を0.2歩/秒上げるかで約0.1秒短縮できる。両方同時に改善することが最速への道。</p>
@@ -2875,6 +4472,69 @@ header{
     <div class="section">
       <div class="section-accent acc-gold"></div>
       <h2 class="sh-gold">📋 スプリント3フェーズ 完全解説</h2>
+      <!-- スプリント速度グラフ -->
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-bottom:20px;">
+        <div style="font-size:11px;font-weight:700;color:var(--gray);text-align:center;margin-bottom:14px;letter-spacing:1px;">SPRINT SPEED CURVE — 30m走の速度変化</div>
+        <svg width="100%" viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+          <!-- Grid -->
+          <line x1="50" y1="20" x2="50" y2="145" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <line x1="50" y1="145" x2="470" y2="145" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <line x1="50" y1="80" x2="470" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="50" y1="50" x2="470" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4"/>
+          <!-- Y axis labels -->
+          <text x="44" y="148" text-anchor="end" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">0</text>
+          <text x="44" y="83" text-anchor="end" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">50%</text>
+          <text x="44" y="53" text-anchor="end" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">80%</text>
+          <text x="44" y="24" text-anchor="end" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">100%</text>
+          <text x="22" y="90" text-anchor="middle" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif" transform="rotate(-90 22 90)">速度</text>
+          <!-- X axis labels -->
+          <text x="50" y="158" text-anchor="middle" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">0m</text>
+          <text x="160" y="158" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif">5m</text>
+          <text x="260" y="158" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Noto Sans JP,sans-serif">15m</text>
+          <text x="380" y="158" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">25m</text>
+          <text x="465" y="158" text-anchor="middle" fill="var(--gray)" font-size="9" font-family="Noto Sans JP,sans-serif">30m</text>
+          <!-- Speed curve (elite) -->
+          <path d="M50,145 Q80,140 110,120 Q130,108 160,85 Q190,65 230,40 Q260,28 290,26 Q330,24 370,26 Q410,28 465,32" fill="none" stroke="#06d6a0" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Speed curve (average) -->
+          <path d="M50,145 Q80,142 110,128 Q130,118 160,98 Q190,78 230,55 Q260,43 290,40 Q330,38 370,40 Q410,42 465,48" fill="none" stroke="rgba(58,134,255,0.5)" stroke-width="2" stroke-dasharray="5,3"/>
+          <!-- Phase zones -->
+          <rect x="50" y="20" width="110" height="125" fill="rgba(245,166,35,0.05)" rx="0"/>
+          <text x="105" y="168" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif">加速フェーズ</text>
+          <rect x="160" y="20" width="160" height="125" fill="rgba(6,214,160,0.05)" rx="0"/>
+          <text x="240" y="168" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Noto Sans JP,sans-serif">最高速フェーズ</text>
+          <rect x="320" y="20" width="150" height="125" fill="rgba(58,134,255,0.05)" rx="0"/>
+          <text x="395" y="168" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">維持フェーズ</text>
+          <!-- Phase dividers -->
+          <line x1="160" y1="20" x2="160" y2="145" stroke="rgba(245,166,35,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+          <line x1="320" y1="20" x2="320" y2="145" stroke="rgba(6,214,160,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+          <!-- 70% at 3 steps annotation -->
+          <circle cx="130" cy="108" r="4" fill="#f5a623"/>
+          <line x1="130" y1="104" x2="130" y2="75" stroke="#f5a623" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="132" y="73" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">最初の3歩で</text>
+          <text x="132" y="83" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">最高速の70%!</text>
+          <!-- Legend -->
+          <line x1="290" y1="140" x2="310" y2="140" stroke="#06d6a0" stroke-width="2"/>
+          <text x="314" y="143" fill="#06d6a0" font-size="9" font-family="Noto Sans JP,sans-serif">トップ選手</text>
+          <line x1="380" y1="140" x2="400" y2="140" stroke="rgba(58,134,255,0.6)" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="404" y="143" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">平均的選手</text>
+        </svg>
+        <!-- Key insights cards -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px;">
+          <div style="background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#f5a623;">0〜5m</div>
+            <div style="font-size:10px;color:#b0bbc8;margin-top:2px;">大臀筋で地面を後方に押す<br>前傾45°を維持</div>
+          </div>
+          <div style="background:rgba(6,214,160,0.08);border:1px solid rgba(6,214,160,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#06d6a0;">5〜20m</div>
+            <div style="font-size:10px;color:#b0bbc8;margin-top:2px;">ハムストが推進力の主役<br>接地時間0.08秒が目標</div>
+          </div>
+          <div style="background:rgba(58,134,255,0.08);border:1px solid rgba(58,134,255,0.2);border-radius:8px;padding:10px;text-align:center;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;color:#6fa8ff;">20m〜</div>
+            <div style="font-size:10px;color:#b0bbc8;margin-top:2px;">フォームを維持<br>肉離れ最多区間</div>
+          </div>
+        </div>
+      </div>
+
       <div class="phase-timeline">
 
         <!-- 加速フェーズ -->
@@ -3059,6 +4719,103 @@ header{
     <!-- 跳躍の物理 -->
     <div class="section">
       <div class="section-accent acc-purple"></div>
+      <!-- Triple extension SVG -->
+      <div style="background:var(--navy3);border-radius:12px;padding:18px;margin-bottom:16px;overflow-x:auto;">
+        <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1px;margin-bottom:10px;text-align:center;">TRIPLE EXTENSION — 3関節が同時に爆発する瞬間</div>
+        <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
+          <!-- Crouched position -->
+          <div style="text-align:center;">
+            <svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <text x="40" y="12" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">沈み込み</text>
+              <!-- ground -->
+              <line x1="5" y1="120" x2="75" y2="120" stroke="#2d3a5a" stroke-width="1.5"/>
+              <!-- crouched figure -->
+              <circle cx="40" cy="35" r="9" fill="none" stroke="#6fa8ff" stroke-width="2"/>
+              <!-- torso bent forward -->
+              <line x1="40" y1="44" x2="36" y2="70" stroke="#6fa8ff" stroke-width="2.5"/>
+              <!-- arms -->
+              <line x1="38" y1="54" x2="24" y2="62" stroke="#6fa8ff" stroke-width="2"/>
+              <line x1="38" y1="54" x2="52" y2="62" stroke="#6fa8ff" stroke-width="2"/>
+              <!-- bent legs -->
+              <line x1="36" y1="70" x2="28" y2="95" stroke="#6fa8ff" stroke-width="2.5"/>
+              <line x1="36" y1="70" x2="44" y2="95" stroke="#6fa8ff" stroke-width="2.5"/>
+              <!-- knees bent -->
+              <line x1="28" y1="95" x2="22" y2="118" stroke="#6fa8ff" stroke-width="2.5"/>
+              <line x1="44" y1="95" x2="50" y2="118" stroke="#6fa8ff" stroke-width="2.5"/>
+              <!-- angle labels -->
+              <text x="14" y="92" fill="#8892a4" font-size="8">膝90°</text>
+              <!-- energy stored -->
+              <text x="40" y="108" text-anchor="middle" fill="#6fa8ff" font-size="8">蓄積中</text>
+            </svg>
+          </div>
+          <!-- Arrow -->
+          <div style="display:flex;align-items:center;padding-top:30px;">
+            <svg width="40" height="40" viewBox="0 0 40 40"><path d="M5,20 L28,20 M22,12 L35,20 L22,28" fill="none" stroke="#f5a623" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <!-- Extended position -->
+          <div style="text-align:center;">
+            <svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <text x="40" y="12" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif">爆発的伸展！</text>
+              <!-- airborne figure -->
+              <circle cx="40" cy="22" r="9" fill="none" stroke="#f5a623" stroke-width="2.5"/>
+              <!-- upright torso -->
+              <line x1="40" y1="31" x2="40" y2="58" stroke="#f5a623" stroke-width="2.5"/>
+              <!-- arms up -->
+              <line x1="40" y1="42" x2="26" y2="32" stroke="#f5a623" stroke-width="2"/>
+              <line x1="40" y1="42" x2="54" y2="32" stroke="#f5a623" stroke-width="2"/>
+              <!-- extended legs -->
+              <line x1="40" y1="58" x2="34" y2="82" stroke="#f5a623" stroke-width="2.5"/>
+              <line x1="40" y1="58" x2="46" y2="82" stroke="#f5a623" stroke-width="2.5"/>
+              <line x1="34" y1="82" x2="32" y2="105" stroke="#f5a623" stroke-width="2.5"/>
+              <line x1="46" y1="82" x2="48" y2="105" stroke="#f5a623" stroke-width="2.5"/>
+              <!-- tiptoe -->
+              <line x1="32" y1="105" x2="26" y2="112" stroke="#f5a623" stroke-width="2"/>
+              <line x1="48" y1="105" x2="54" y2="112" stroke="#f5a623" stroke-width="2"/>
+              <!-- joint circles - hip -->
+              <circle cx="40" cy="58" r="5" fill="rgba(0,200,150,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <!-- joint circles - knee -->
+              <circle cx="34" cy="82" r="5" fill="rgba(0,200,150,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <circle cx="46" cy="82" r="5" fill="rgba(0,200,150,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <!-- joint circles - ankle -->
+              <circle cx="32" cy="105" r="5" fill="rgba(0,200,150,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <circle cx="48" cy="105" r="5" fill="rgba(0,200,150,0.3)" stroke="#06d6a0" stroke-width="1.5"/>
+              <!-- upward arrow -->
+              <line x1="40" y1="118" x2="40" y2="90" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <text x="56" y="62" fill="#06d6a0" font-size="8">股関節</text>
+              <text x="56" y="85" fill="#06d6a0" font-size="8">膝</text>
+              <text x="56" y="107" fill="#06d6a0" font-size="8">足首</text>
+            </svg>
+          </div>
+          <!-- Arrow -->
+          <div style="display:flex;align-items:center;padding-top:30px;">
+            <svg width="40" height="40" viewBox="0 0 40 40"><path d="M20,35 L20,8 M12,15 L20,3 L28,15" fill="none" stroke="#06d6a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <!-- In air -->
+          <div style="text-align:center;">
+            <svg width="80" height="130" viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+              <text x="40" y="12" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Noto Sans JP,sans-serif">最高点</text>
+              <circle cx="40" cy="28" r="9" fill="none" stroke="#06d6a0" stroke-width="2.5"/>
+              <line x1="40" y1="37" x2="40" y2="62" stroke="#06d6a0" stroke-width="2.5"/>
+              <line x1="40" y1="47" x2="24" y2="40" stroke="#06d6a0" stroke-width="2"/>
+              <line x1="40" y1="47" x2="56" y2="40" stroke="#06d6a0" stroke-width="2"/>
+              <line x1="40" y1="62" x2="34" y2="82" stroke="#06d6a0" stroke-width="2.5"/>
+              <line x1="40" y1="62" x2="46" y2="82" stroke="#06d6a0" stroke-width="2.5"/>
+              <line x1="34" y1="82" x2="30" y2="100" stroke="#06d6a0" stroke-width="2.5"/>
+              <line x1="46" y1="82" x2="50" y2="100" stroke="#06d6a0" stroke-width="2.5"/>
+              <!-- height arrow -->
+              <line x1="14" y1="28" x2="14" y2="118" stroke="#06d6a0" stroke-width="1" stroke-dasharray="2,2"/>
+              <line x1="10" y1="28" x2="18" y2="28" stroke="#06d6a0" stroke-width="1.5"/>
+              <text x="4" y="74" fill="#06d6a0" font-size="9" transform="rotate(-90 4 74)">垂直跳び</text>
+              <text x="40" y="115" text-anchor="middle" fill="#f5a623" font-size="10" font-family="Bebas Neue,sans-serif">65〜75cm</text>
+              <text x="40" y="125" text-anchor="middle" fill="#8892a4" font-size="8">高校トップ目標</text>
+            </svg>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:20px;margin-top:10px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:50%;background:#06d6a0;border:2px solid #06d6a0;"></div><span style="font-size:10px;color:#b0bbc8;">3つの関節が同時に伸展＝最大跳躍力</span></div>
+          <div style="display:flex;align-items:center;gap:6px;"><div style="width:10px;height:10px;border-radius:50%;background:rgba(245,166,35,0.3);border:2px solid var(--gold);"></div><span style="font-size:10px;color:#b0bbc8;">1つでも遅れると力が分散して高さが落ちる</span></div>
+        </div>
+      </div>
       <h2 class="sh-purple">🔬 跳躍力の2大原理</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
         <div style="background:var(--navy3);border-radius:10px;padding:18px;border:1px solid rgba(168,85,247,0.2);">
@@ -4164,47 +5921,77 @@ header{
       <div class="section-accent acc-purple"></div>
       <h2 class="sh-purple">🧠 野球に関わる脳の主要エリア</h2>
       <div class="section-sub">「考えながらプレーする」と「体が勝手に動く」は、脳の使う場所が違う</div>
-      <table class="data-table">
-        <thead><tr><th>脳の部位</th><th>主な役割</th><th>野球での働き</th><th>鍛え方</th></tr></thead>
-        <tbody>
-          <tr>
-            <td class="td-hl">小脳</td>
-            <td>運動プログラムの自動化・微細な協調調整</td>
-            <td class="td-hl">フォームの「自動化」。投球・打撃の反復練習で形成される運動記憶の倉庫。熟練するほど小脳が主役になり前頭葉の「考える」負担が減る</td>
-            <td>正しいフォームの高品質な反復（1,000回以上）</td>
-          </tr>
-          <tr>
-            <td class="td-hl">前頭前野</td>
-            <td>意思決定・衝動制御・集中の維持・計画</td>
-            <td>配球読み・走塁判断・試合状況の戦略的思考。ストレス・睡眠不足で最初に機能低下する部位</td>
-            <td>睡眠（最重要）・マインドフルネス・瞑想</td>
-          </tr>
-          <tr>
-            <td class="td-hl">扁桃体（へんとうたい）</td>
-            <td>恐怖・不安・緊張の感情処理</td>
-            <td class="td-red">プレッシャーで「固まる」「頭が真っ白になる」の主役。過度に活性化すると前頭前野の機能が低下し判断力・集中力が落ちる（アミグダラ・ハイジャック）</td>
-            <td>呼吸法・ルーティン・段階的な高プレッシャー練習</td>
-          </tr>
-          <tr>
-            <td>基底核</td>
-            <td>習慣行動の自動実行・報酬系</td>
-            <td>打席でのルーティン・守備の構えなど「考えずにやる動作」を管理。ドーパミン報酬系もここが中心</td>
-            <td>一貫したルーティン構築・小さな成功体験の積み重ね</td>
-          </tr>
-          <tr>
-            <td>前帯状皮質（ACC）</td>
-            <td>注意の配分・エラー検出・葛藤の調整</td>
-            <td>「今この打席に集中する」「ミスを引きずらない」の神経基盤。過集中と解放の切り替えに関与</td>
-            <td>マインドフルネス・集中ドリル</td>
-          </tr>
-          <tr>
-            <td>海馬（かいば）</td>
-            <td>記憶の形成・空間認識・ストレス感受性</td>
-            <td>試合経験・相手の傾向・自分の成功体験の記憶。慢性ストレスで萎縮し記憶力・判断力が落ちる</td>
-            <td>有酸素運動（海馬の神経新生を促進）・睡眠</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <!-- 脳の断面図SVG -->
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-top:14px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+        <div style="flex-shrink:0;text-align:center;">
+          <svg width="200" height="180" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Brain outline -->
+            <ellipse cx="100" cy="85" rx="78" ry="65" fill="#1c2540" stroke="#2d3a5a" stroke-width="2"/>
+            <!-- Brain folds suggestion -->
+            <path d="M40,60 Q55,45 70,58 Q85,45 100,58 Q115,45 130,58 Q145,45 160,60" fill="none" stroke="#2d3a5a" stroke-width="1.5"/>
+            <path d="M30,80 Q45,68 60,78 Q75,65 90,78 Q105,65 120,78 Q135,65 150,78 Q162,68 172,80" fill="none" stroke="#2d3a5a" stroke-width="1.5"/>
+            <!-- 小脳 -->
+            <ellipse cx="100" cy="135" rx="45" ry="22" fill="rgba(6,214,160,0.2)" stroke="#06d6a0" stroke-width="1.5"/>
+            <text x="100" y="132" text-anchor="middle" fill="#06d6a0" font-size="9" font-family="Noto Sans JP,sans-serif">小脳</text>
+            <text x="100" y="143" text-anchor="middle" fill="#4dffcc" font-size="8" font-family="Noto Sans JP,sans-serif">フォーム自動化</text>
+            <!-- 前頭前野 -->
+            <ellipse cx="60" cy="70" rx="28" ry="20" fill="rgba(58,134,255,0.2)" stroke="#6fa8ff" stroke-width="1.5"/>
+            <text x="60" y="67" text-anchor="middle" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">前頭前野</text>
+            <text x="60" y="78" text-anchor="middle" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">判断・集中</text>
+            <!-- 扁桃体 -->
+            <ellipse cx="78" cy="108" rx="16" ry="10" fill="rgba(230,57,70,0.3)" stroke="#e63946" stroke-width="1.5"/>
+            <text x="78" y="106" text-anchor="middle" fill="#ff8a96" font-size="8" font-family="Noto Sans JP,sans-serif">扁桃体</text>
+            <text x="78" y="116" text-anchor="middle" fill="#ff8a96" font-size="7" font-family="Noto Sans JP,sans-serif">緊張・恐怖</text>
+            <!-- 海馬 -->
+            <ellipse cx="125" cy="108" rx="16" ry="10" fill="rgba(245,166,35,0.2)" stroke="#f5a623" stroke-width="1.5"/>
+            <text x="125" y="106" text-anchor="middle" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">海馬</text>
+            <text x="125" y="116" text-anchor="middle" fill="#f5a623" font-size="7" font-family="Noto Sans JP,sans-serif">記憶・経験</text>
+            <!-- 基底核 -->
+            <ellipse cx="100" cy="88" rx="18" ry="12" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="100" y="86" text-anchor="middle" fill="#c49aff" font-size="8" font-family="Noto Sans JP,sans-serif">基底核</text>
+            <text x="100" y="96" text-anchor="middle" fill="#c49aff" font-size="7" font-family="Noto Sans JP,sans-serif">習慣・ルーティン</text>
+            <!-- 大脳皮質 -->
+            <ellipse cx="140" cy="65" rx="24" ry="17" fill="rgba(0,200,150,0.15)" stroke="#00c896" stroke-width="1.5"/>
+            <text x="140" y="62" text-anchor="middle" fill="#4dffcc" font-size="8" font-family="Noto Sans JP,sans-serif">運動野</text>
+            <text x="140" y="73" text-anchor="middle" fill="#4dffcc" font-size="7" font-family="Noto Sans JP,sans-serif">動作指令</text>
+          </svg>
+          <div style="font-size:9px;color:var(--gray);margin-top:4px;">脳の断面イメージ図</div>
+        </div>
+        <!-- Cards -->
+        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:260px;">
+          <div style="background:rgba(6,214,160,0.08);border:1px solid rgba(6,214,160,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:#06d6a0;margin-bottom:4px;">🧠 小脳</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">フォームの<strong style="color:var(--white);">自動化倉庫</strong>。反復練習で「考えなくても動ける」状態を作る。1,000回反復で自動化。</div>
+            <div style="margin-top:5px;font-size:10px;color:#4dffcc;">→ 正しいフォームの反復</div>
+          </div>
+          <div style="background:rgba(58,134,255,0.08);border:1px solid rgba(58,134,255,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:#6fa8ff;margin-bottom:4px;">💭 前頭前野</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">配球読み・状況判断・集中維持。睡眠不足で<strong style="color:var(--red);">最初に機能低下</strong>する部位。</div>
+            <div style="margin-top:5px;font-size:10px;color:#6fa8ff;">→ 睡眠・マインドフルネス</div>
+          </div>
+          <div style="background:rgba(230,57,70,0.08);border:1px solid rgba(230,57,70,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:#ff8a96;margin-bottom:4px;">😰 扁桃体</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">緊張・恐怖の感情処理。<strong style="color:var(--red);">過活動でチョーキング</strong>の主役。呼吸法で制御できる。</div>
+            <div style="margin-top:5px;font-size:10px;color:#ff8a96;">→ 呼吸法・ルーティン</div>
+          </div>
+          <div style="background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:#c49aff;margin-bottom:4px;">🔄 基底核</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">習慣の自動実行。打席ルーティンを管理。ドーパミン報酬系の中心。</div>
+            <div style="margin-top:5px;font-size:10px;color:#c49aff;">→ 一貫したルーティン構築</div>
+          </div>
+          <div style="background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--gold);margin-bottom:4px;">📚 海馬</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">試合経験・成功記憶の蓄積。<strong style="color:var(--red);">慢性ストレスで萎縮</strong>し判断力が落ちる。</div>
+            <div style="margin-top:5px;font-size:10px;color:var(--gold);">→ 有酸素運動・睡眠</div>
+          </div>
+          <div style="background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.25);border-radius:8px;padding:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:4px;">⚡ 一次運動野</div>
+            <div style="font-size:11px;color:#b0bbc8;line-height:1.6;">筋肉への動作指令の発信源。イメトレでも実際と<strong style="color:var(--white);">同じ部位が活性化</strong>する。</div>
+            <div style="margin-top:5px;font-size:10px;color:var(--green);">→ イメージトレーニング</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section">
@@ -4239,9 +6026,60 @@ header{
 
     <div class="section">
       <div class="section-accent acc-green"></div>
-      <h2 class="sh-green">🧬 ドーパミン・ノルアドレナリン・セロトニンの役割</h2>
-      <div class="section-sub">競技パフォーマンスを直接左右する神経伝達物質を理解する</div>
-      <table class="data-table">
+      <h2 class="sh-green">🧬 パフォーマンスを左右する神経伝達物質</h2>
+      <div class="section-sub">脳内の「化学物質」が集中力・やる気・緊張をコントロールしている</div>
+      <!-- 棒グラフイメージ -->
+      <div style="background:var(--navy3);border-radius:12px;padding:18px;margin-top:14px;">
+        <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1px;margin-bottom:14px;text-align:center;">各物質のパフォーマンスへの影響</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <!-- Dopamine bar -->
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+              <span style="color:#c49aff;font-weight:700;">🟣 ドーパミン</span>
+              <span style="color:var(--gray);">モチベーション・集中・学習</span>
+            </div>
+            <div style="height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;position:relative;">
+              <div style="height:100%;width:85%;background:linear-gradient(to right,#a855f7,#c49aff);border-radius:5px;"></div>
+            </div>
+            <div style="font-size:10px;color:var(--gray);margin-top:3px;">出し方：小さな目標達成・新技術習得・好きな音楽</div>
+          </div>
+          <!-- Noradrenaline bar -->
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+              <span style="color:#ff8a96;font-weight:700;">🔴 ノルアドレナリン</span>
+              <span style="color:var(--gray);">覚醒・集中・闘争反応</span>
+            </div>
+            <div style="height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;position:relative;">
+              <div style="height:100%;width:65%;background:linear-gradient(to right,#e63946,#ff8a96);border-radius:5px;"></div>
+              <div style="position:absolute;right:20%;top:0;bottom:0;width:2px;background:rgba(255,255,255,0.4);"></div>
+            </div>
+            <div style="font-size:10px;color:var(--gray);margin-top:3px;">適量で最高集中。多すぎるとパニック（逆U字）→呼吸法で調整</div>
+          </div>
+          <!-- Serotonin bar -->
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+              <span style="color:#4dffcc;font-weight:700;">🟢 セロトニン</span>
+              <span style="color:var(--gray);">感情安定・自己肯定感・睡眠の質</span>
+            </div>
+            <div style="height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;">
+              <div style="height:100%;width:70%;background:linear-gradient(to right,#06d6a0,#4dffcc);border-radius:5px;"></div>
+            </div>
+            <div style="font-size:10px;color:var(--gray);margin-top:3px;">出し方：朝の日光浴15分・有酸素運動・規則正しい睡眠</div>
+          </div>
+          <!-- Cortisol bar -->
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+              <span style="color:#ffaa80;font-weight:700;">🟠 コルチゾール（要注意）</span>
+              <span style="color:var(--gray);">ストレスホルモン・筋肉分解</span>
+            </div>
+            <div style="height:10px;background:rgba(255,255,255,0.07);border-radius:5px;overflow:hidden;">
+              <div id="cortisol-bar" style="height:100%;width:40%;background:linear-gradient(to right,#ff7043,#ffaa80);border-radius:5px;"></div>
+            </div>
+            <div style="font-size:10px;color:var(--red);margin-top:3px;">慢性的に高いと：筋肉分解・記憶力低下・睡眠障害。睡眠不足・過練習で急増</div>
+          </div>
+        </div>
+      </div>
+      <table class="data-table" style="margin-top:14px;">
         <thead><tr><th>物質</th><th>主な役割</th><th>多すぎると</th><th>少なすぎると</th><th>野球選手が出す方法</th></tr></thead>
         <tbody>
           <tr>
@@ -4313,21 +6151,53 @@ header{
       <div class="section-accent acc-red"></div>
       <h2 class="sh-red">📈 ヤーキーズ・ドットソン法則 — 緊張の「適量」がある</h2>
       <div class="section-sub">緊張ゼロも緊張しすぎも両方パフォーマンスを下げる</div>
-      <div style="background:var(--navy3);border-radius:12px;padding:24px;margin-top:14px;">
-        <div style="display:flex;align-items:flex-end;justify-content:center;gap:4px;height:120px;margin-bottom:12px;">
-          <div style="width:28px;background:rgba(58,134,255,0.5);border-radius:4px 4px 0 0;height:30%;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;"><span style="font-size:9px;color:#6fa8ff;">低</span></div>
-          <div style="width:28px;background:rgba(58,134,255,0.6);border-radius:4px 4px 0 0;height:50%"></div>
-          <div style="width:28px;background:rgba(0,200,150,0.7);border-radius:4px 4px 0 0;height:70%"></div>
-          <div style="width:28px;background:rgba(0,200,150,0.9);border-radius:4px 4px 0 0;height:88%"></div>
-          <div style="width:28px;background:var(--green);border-radius:4px 4px 0 0;height:100%;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;"><span style="font-size:9px;color:#0a0e1a;font-weight:700;">最高</span></div>
-          <div style="width:28px;background:rgba(0,200,150,0.9);border-radius:4px 4px 0 0;height:88%"></div>
-          <div style="width:28px;background:rgba(245,166,35,0.8);border-radius:4px 4px 0 0;height:70%"></div>
-          <div style="width:28px;background:rgba(230,57,70,0.7);border-radius:4px 4px 0 0;height:50%"></div>
-          <div style="width:28px;background:rgba(230,57,70,0.8);border-radius:4px 4px 0 0;height:35%"></div>
-          <div style="width:28px;background:var(--red);border-radius:4px 4px 0 0;height:20%;display:flex;align-items:flex-start;justify-content:center;padding-top:4px;"><span style="font-size:9px;color:var(--white);">崩壊</span></div>
-        </div>
-        <div style="text-align:center;font-size:11px;color:var(--gray);margin-top:8px;">← 緊張レベル（低 ──────── 高）→</div>
-        <div style="text-align:center;font-size:11px;color:#b0bbc8;margin-top:8px;">パフォーマンスは「適度な緊張（ゾーン）」の時に最大になる逆U字カーブを描く</div>
+      <div style="background:var(--navy3);border-radius:12px;padding:20px;margin-top:14px;">
+        <svg width="100%" viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;display:block;margin:0 auto;">
+          <defs>
+            <marker id="arrYD" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#8892a4"/></marker>
+          </defs>
+          <!-- Axes -->
+          <line x1="45" y1="15" x2="45" y2="135" stroke="#3a4560" stroke-width="1.5" marker-end="url(#arrYD)"/>
+          <line x1="40" y1="130" x2="385" y2="130" stroke="#3a4560" stroke-width="1.5" marker-end="url(#arrYD)"/>
+          <!-- Y axis label -->
+          <text x="16" y="80" fill="#8892a4" font-size="10" font-family="Noto Sans JP,sans-serif" transform="rotate(-90 16 80)">パフォーマンス ↑</text>
+          <!-- X axis label -->
+          <text x="210" y="148" text-anchor="middle" fill="#8892a4" font-size="10" font-family="Noto Sans JP,sans-serif">覚醒・緊張レベル →</text>
+          <!-- Gradient fill under curve -->
+          <path d="M55,128 Q85,115 115,90 Q155,50 210,25 Q260,48 295,78 Q325,105 355,124 L355,130 L55,130 Z" fill="url(#ydGrad)" opacity="0.4"/>
+          <defs>
+            <linearGradient id="ydGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#3a86ff"/>
+              <stop offset="45%" stop-color="#06d6a0"/>
+              <stop offset="100%" stop-color="#e63946"/>
+            </linearGradient>
+          </defs>
+          <!-- Inverted U curve -->
+          <path d="M55,128 Q85,115 115,90 Q155,50 210,25 Q260,48 295,78 Q325,105 355,124" fill="none" stroke="#06d6a0" stroke-width="3"/>
+          <!-- Zone highlight -->
+          <rect x="170" y="22" width="80" height="112" fill="rgba(245,166,35,0.07)" stroke="rgba(245,166,35,0.3)" stroke-width="1" stroke-dasharray="4,2"/>
+          <!-- Peak star -->
+          <text x="210" y="20" text-anchor="middle" fill="#f5a623" font-size="14">★</text>
+          <text x="210" y="15" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif">ZONE</text>
+          <!-- Zone label -->
+          <text x="210" y="110" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif" font-weight="bold">最高</text>
+          <text x="210" y="122" text-anchor="middle" fill="#f5a623" font-size="9" font-family="Noto Sans JP,sans-serif">パフォーマンス</text>
+          <!-- Low zone -->
+          <text x="90" y="110" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">ぼーっ</text>
+          <text x="90" y="121" text-anchor="middle" fill="#6fa8ff" font-size="9" font-family="Noto Sans JP,sans-serif">としてる</text>
+          <!-- High zone -->
+          <text x="330" y="108" text-anchor="middle" fill="#ff8a96" font-size="9" font-family="Noto Sans JP,sans-serif">パニック</text>
+          <text x="330" y="119" text-anchor="middle" fill="#ff8a96" font-size="9" font-family="Noto Sans JP,sans-serif">固まる</text>
+          <!-- Axis ticks -->
+          <text x="41" y="28" text-anchor="end" fill="#8892a4" font-size="9">高</text>
+          <text x="41" y="133" text-anchor="end" fill="#8892a4" font-size="9">低</text>
+          <text x="57" y="143" fill="#8892a4" font-size="9">低</text>
+          <text x="348" y="143" fill="#8892a4" font-size="9">高</text>
+          <!-- Solution arrows -->
+          <text x="72" y="55" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">→ 音楽・掛け声</text>
+          <text x="295" y="60" fill="#ff8a96" font-size="8" font-family="Noto Sans JP,sans-serif">→ 呼吸法</text>
+        </svg>
+        <div style="text-align:center;font-size:11px;color:#b0bbc8;margin-top:6px;">「緊張は敵ではない。適切なレベルにコントロールするものだ」</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px;">
         <div style="background:var(--navy3);border-radius:10px;padding:14px;border-top:3px solid var(--blue);">
@@ -4503,6 +6373,40 @@ header{
       <div class="section-accent acc-green"></div>
       <h2 class="sh-green">🔁 習慣ループの脳科学</h2>
       <div class="section-sub">MIT脳科学研究所が発見した習慣の「3段ループ」</div>
+      <!-- Habit loop circle SVG -->
+      <div style="background:var(--navy3);border-radius:12px;padding:16px;margin-top:14px;text-align:center;">
+        <svg width="280" height="200" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
+          <defs>
+            <marker id="arr2" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 z" fill="#f5a623"/></marker>
+          </defs>
+          <!-- Circle path (dashed) -->
+          <circle cx="140" cy="100" r="70" fill="none" stroke="rgba(245,166,35,0.2)" stroke-width="2" stroke-dasharray="6,3"/>
+          <!-- CUE - top -->
+          <circle cx="140" cy="28" r="22" fill="rgba(245,166,35,0.15)" stroke="#f5a623" stroke-width="2"/>
+          <text x="140" y="24" text-anchor="middle" fill="#f5a623" font-size="11" font-family="Noto Sans JP,sans-serif" font-weight="bold">🔔</text>
+          <text x="140" y="36" text-anchor="middle" fill="#f5a623" font-size="10" font-family="Noto Sans JP,sans-serif">きっかけ</text>
+          <!-- ROUTINE - bottom right -->
+          <circle cx="218" cy="148" r="22" fill="rgba(58,134,255,0.15)" stroke="#6fa8ff" stroke-width="2"/>
+          <text x="218" y="144" text-anchor="middle" fill="#6fa8ff" font-size="11" font-family="Noto Sans JP,sans-serif" font-weight="bold">⚙️</text>
+          <text x="218" y="156" text-anchor="middle" fill="#6fa8ff" font-size="10" font-family="Noto Sans JP,sans-serif">ルーティン</text>
+          <!-- REWARD - bottom left -->
+          <circle cx="62" cy="148" r="22" fill="rgba(6,214,160,0.15)" stroke="#06d6a0" stroke-width="2"/>
+          <text x="62" y="144" text-anchor="middle" fill="#06d6a0" font-size="11" font-family="Noto Sans JP,sans-serif" font-weight="bold">🍬</text>
+          <text x="62" y="156" text-anchor="middle" fill="#06d6a0" font-size="10" font-family="Noto Sans JP,sans-serif">報酬</text>
+          <!-- Arrows -->
+          <path d="M158,46 Q195,70 200,126" fill="none" stroke="#f5a623" stroke-width="2" marker-end="url(#arr2)"/>
+          <path d="M196,166 Q140,190 84,166" fill="none" stroke="#f5a623" stroke-width="2" marker-end="url(#arr2)"/>
+          <path d="M80,126 Q86,70 122,46" fill="none" stroke="#f5a623" stroke-width="2" marker-end="url(#arr2)"/>
+          <!-- Center label -->
+          <text x="140" y="96" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">脳の基底核が</text>
+          <text x="140" y="108" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">自動実行する</text>
+          <!-- Example labels -->
+          <text x="195" y="95" fill="#6fa8ff" font-size="8" font-family="Noto Sans JP,sans-serif">例：チューブ引く</text>
+          <text x="82" y="95" fill="#06d6a0" font-size="8" font-family="Noto Sans JP,sans-serif">例：完了チェック</text>
+          <text x="100" y="195" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">例：グローブを置いたら</text>
+        </svg>
+      </div>
+
       <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-top:16px;flex-wrap:wrap;">
         <div style="background:rgba(245,166,35,0.1);border:2px solid rgba(245,166,35,0.4);border-radius:12px;padding:18px 20px;text-align:center;min-width:150px;">
           <div style="font-size:22px;margin-bottom:6px;">🔔</div>
@@ -4523,6 +6427,51 @@ header{
         </div>
         <div style="font-size:24px;color:var(--gold);padding:0 8px;">↩</div>
       </div>
+
+        <!-- 習慣ループ 円形SVG -->
+        <div style="text-align:center;margin-top:16px;">
+          <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;">
+            <!-- Outer circle -->
+            <circle cx="140" cy="140" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <!-- Loop arrows -->
+            <path d="M140,30 Q230,30 240,140" fill="none" stroke="rgba(245,166,35,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+            <path d="M240,140 Q240,235 140,248" fill="none" stroke="rgba(0,200,150,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+            <path d="M140,248 Q42,240 40,140" fill="none" stroke="rgba(168,85,247,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+            <path d="M40,140 Q36,42 140,30" fill="none" stroke="rgba(58,134,255,0.4)" stroke-width="2" stroke-dasharray="6,3"/>
+            <!-- Arrow heads -->
+            <polygon points="240,145 235,133 248,136" fill="rgba(0,200,150,0.6)"/>
+            <polygon points="135,248 148,241 145,254" fill="rgba(168,85,247,0.6)"/>
+            <polygon points="40,135 43,148 36,144" fill="rgba(58,134,255,0.6)"/>
+            <polygon points="145,30 132,36 135,23" fill="rgba(245,166,35,0.6)"/>
+            <!-- Node 1: Cue -->
+            <circle cx="140" cy="28" r="32" fill="#1c2540" stroke="rgba(245,166,35,0.6)" stroke-width="2"/>
+            <text x="140" y="22" text-anchor="middle" fill="#f5a623" font-size="14" font-family="Noto Sans JP,sans-serif">🔔</text>
+            <text x="140" y="34" text-anchor="middle" fill="#f5a623" font-size="10" font-weight="700" font-family="Noto Sans JP,sans-serif">きっかけ</text>
+            <text x="140" y="46" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">Cue</text>
+            <!-- Node 2: Routine -->
+            <circle cx="248" cy="140" r="32" fill="#1c2540" stroke="rgba(0,200,150,0.6)" stroke-width="2"/>
+            <text x="248" y="134" text-anchor="middle" fill="#06d6a0" font-size="14" font-family="Noto Sans JP,sans-serif">⚙️</text>
+            <text x="248" y="146" text-anchor="middle" fill="#06d6a0" font-size="10" font-weight="700" font-family="Noto Sans JP,sans-serif">ルーティン</text>
+            <text x="248" y="158" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">Routine</text>
+            <!-- Node 3: Reward -->
+            <circle cx="140" cy="252" r="32" fill="#1c2540" stroke="rgba(168,85,247,0.6)" stroke-width="2"/>
+            <text x="140" y="246" text-anchor="middle" fill="#c49aff" font-size="14" font-family="Noto Sans JP,sans-serif">🍬</text>
+            <text x="140" y="258" text-anchor="middle" fill="#c49aff" font-size="10" font-weight="700" font-family="Noto Sans JP,sans-serif">報酬</text>
+            <text x="140" y="270" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">Reward</text>
+            <!-- Center -->
+            <circle cx="140" cy="140" r="42" fill="rgba(28,37,64,0.9)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="140" y="133" text-anchor="middle" fill="#f0f4ff" font-size="11" font-weight="700" font-family="Noto Sans JP,sans-serif">習慣</text>
+            <text x="140" y="147" text-anchor="middle" fill="#f0f4ff" font-size="11" font-weight="700" font-family="Noto Sans JP,sans-serif">ループ</text>
+            <text x="140" y="160" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">繰り返しで自動化</text>
+            <!-- Node 4: Craving (desire) -->
+            <circle cx="32" cy="140" r="32" fill="#1c2540" stroke="rgba(58,134,255,0.6)" stroke-width="2"/>
+            <text x="32" y="134" text-anchor="middle" fill="#6fa8ff" font-size="14" font-family="Noto Sans JP,sans-serif">💭</text>
+            <text x="32" y="146" text-anchor="middle" fill="#6fa8ff" font-size="10" font-weight="700" font-family="Noto Sans JP,sans-serif">渇望</text>
+            <text x="32" y="158" text-anchor="middle" fill="var(--gray)" font-size="8" font-family="Noto Sans JP,sans-serif">Craving</text>
+          </svg>
+          <div style="font-size:11px;color:var(--gray);margin-top:8px;">報酬が出るとドーパミンが分泌され「渇望」が生まれ、次の「きっかけ」への反応が強くなる</div>
+        </div>
+
       <div class="info-box ib-green" style="margin-top:16px;">
         <div class="ib-title">🔑 習慣を「設計」するとはどういうことか</div>
         <p>新しい習慣を作るには<strong style="color:var(--green);">「きっかけを明確に設定→行動を小さく始める→即座に報酬を与える」</strong>の3ステップが必要。例：毎日のチューブ外旋運動→「グローブを置いたら（きっかけ）→チューブを10回引く（ルーティン）→完了チェックをつける（報酬）」。報酬が脳の基底核に「これは価値ある行動」と記憶させ、次第に自動化される。</p>
@@ -4570,6 +6519,30 @@ header{
       <div class="section-accent acc-gold"></div>
       <h2 class="sh-gold">🎯 成長マインドセット vs 固定マインドセット</h2>
       <div class="section-sub">スタンフォード大のキャロル・ドゥエック教授の研究 — 野球選手として最重要の概念</div>
+
+      <!-- Visual comparison -->
+      <div style="background:var(--navy3);border-radius:12px;padding:16px;margin:14px 0;overflow-x:auto;">
+        <svg width="100%" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" style="max-width:600px;display:block;margin:0 auto;">
+          <!-- Fixed mindset path (declining) -->
+          <text x="80" y="18" text-anchor="middle" fill="#ff8a96" font-size="11" font-family="Noto Sans JP,sans-serif">固定マインドセット</text>
+          <polyline points="20,30 80,35 140,50 200,65 260,75 300,85" fill="none" stroke="#e63946" stroke-width="2.5"/>
+          <circle cx="300" cy="85" r="4" fill="#e63946"/>
+          <text x="310" y="89" fill="#e63946" font-size="9" font-family="Noto Sans JP,sans-serif">停滞・諦め</text>
+          <!-- Growth mindset path (ascending) -->
+          <text x="490" y="18" text-anchor="middle" fill="#4dffcc" font-size="11" font-family="Noto Sans JP,sans-serif">成長マインドセット</text>
+          <polyline points="300,85 340,72 380,60 420,45 460,32 520,18 580,10" fill="none" stroke="#06d6a0" stroke-width="2.5"/>
+          <circle cx="300" cy="85" r="4" fill="#06d6a0"/>
+          <!-- Failure moment -->
+          <circle cx="300" cy="85" r="10" fill="rgba(230,57,70,0.15)" stroke="#e63946" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="300" y="98" text-anchor="middle" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">失敗・スランプ</text>
+          <!-- Axis labels -->
+          <text x="10" y="95" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif">時間→</text>
+          <text x="5" y="50" fill="#8892a4" font-size="9" font-family="Noto Sans JP,sans-serif" transform="rotate(-90 5 50)">成長</text>
+          <!-- Arrow from failure to growth -->
+          <path d="M310,82 Q330,75 340,72" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr)"/>
+          <text x="315" y="68" fill="#f5a623" font-size="8" font-family="Noto Sans JP,sans-serif">「学びだ」</text>
+        </svg>
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
         <div style="background:var(--navy3);border-radius:10px;padding:16px;border:1px solid rgba(230,57,70,0.25);">
           <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:10px;">❌ 固定マインドセット（Fixed Mindset）</div>
@@ -6100,6 +8073,18 @@ header{
 <!-- ============================================================ -->
 <script>
 // ===== PAGE SWITCH =====
+// mobile table scroll
+(function(){
+  document.querySelectorAll('.data-table').forEach(function(t){
+    var p=t.parentElement;
+    if(p&&p.tagName!=='DIV'||!p.style.overflowX){
+      var w=document.createElement('div');
+      w.style.cssText='overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;';
+      p.insertBefore(w,t);w.appendChild(t);
+    }
+  });
+})();
+
 function switchPage(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -6244,6 +8229,78 @@ const muscleDB = {
     baseball:'投球アクセラレーションフェーズで肘を一気に伸ばして球速を生む。腕の体積の約60〜70%を占める最大の上肢筋。',
     injury:'肘頭疲労骨折（投手で多い）・上腕三頭筋腱の過負荷。高重量種目での急激な負荷増加に注意。',
     exercises:['トライセプスプレスダウン','スカルクラッシャー','ディップス','クローズグリップベンチプレス']
+  },
+  serratus: {
+    emoji:'🔵', name:'前鋸筋（ぜんきょきん）', sub:'肋骨側面〜肩甲骨内側縁 | 肩甲骨を胸壁に固定する唯一の筋肉',
+    where:'第1〜9肋骨外側面 → 肩甲骨内側縁・下角（前面）',
+    action:'肩甲骨外転・前傾・上方回旋・胸壁への固定',
+    baseball:'投球全フェーズで肩甲骨を安定させる。弱いと肩甲骨が浮き（ウィングスキャプラ）→ローテーターカフへ過負荷→腱板炎のドミノ倒しが始まる。投手の肩障害予防の最重要筋。',
+    injury:'前鋸筋弱化→ウィングスキャプラ→肩峰下インピンジメント→腱板炎。肩障害の根本原因のひとつ。',
+    exercises:['セレーションプッシュアップ（毎日）','ウォールスライド','ダンベルプロトラクション','プランク（肩甲骨外転意識）']
+  },
+  deltoid: {
+    emoji:'🔷', name:'三角筋（さんかくきん）', sub:'前部・中部・後部の3区画 | 腕を全方向に動かす',
+    where:'鎖骨外側端（前部）・肩峰（中部）・肩甲棘（後部） → 上腕骨三角筋粗面',
+    action:'前部:肩屈曲・内旋 / 中部:肩外転 / 後部:肩伸展・外旋',
+    baseball:'コッキングで腕を外転・外旋（中部・後部）。送球時の腕の挙上全般。フォロースルーで後部が制動に関与。前部の過剰強化は巻き肩の原因になるため後部とのバランスが重要。',
+    injury:'三角筋下滑液包炎。前部過緊張による巻き肩→投球フォーム崩壊。',
+    exercises:['サイドレイズ（中部）','リバースフライ（後部）','ショルダープレス（全体）','フェイスプル（後部）']
+  },
+  transverse: {
+    emoji:'🔩', name:'腹横筋（ふくおうきん）', sub:'最深層のインナーコア筋 | 全動作の土台',
+    where:'第7〜12肋骨内面・腸骨稜・胸腰筋膜 → 白線・恥骨稜',
+    action:'腹腔内圧（IAP）上昇・腰椎安定・インナーコア形成',
+    baseball:'動作開始の0.03秒前に先行収縮して腰椎を固める。この「先行収縮」が失われると力が30〜40%漏れる。慢性腰痛の選手はここから再教育が必要。',
+    injury:'腹横筋の先行収縮消失は慢性腰痛の主因。腰痛既往者では必ず萎縮している。',
+    exercises:['ドローイン（先行収縮の再学習）','デッドバッグ','プランク（IAP意識）','バードドッグ']
+  },
+  iliopsoas: {
+    emoji:'⚡', name:'腸腰筋（ちょうようきん）', sub:'大腰筋＋腸骨筋 | ステップ・走力の核心',
+    where:'T12〜L5・腸骨窩 → 大腿骨小転子',
+    action:'股関節屈曲（最強）・体幹屈曲（大腰筋）',
+    baseball:'投球の踏み込み足の引き出し・打撃のステップ・スプリントの膝引き上げ。腸腰筋が弱い＝ストライドが短い＝球速低下。硬い場合は骨盤前傾・腰痛の素地を作る。',
+    injury:'鼡径部痛・腸腰筋炎。座位中心の生活で短縮しやすく骨盤前傾・腰椎前彎増大を引き起こす。',
+    exercises:['ランジ（深いステップ）','ハイニードリル','レッグレイズ','ヒップフレクサーストレッチ']
+  },
+  glmed: {
+    emoji:'🛡️', name:'中臀筋（ちゅうでんきん）', sub:'ACL予防の要 | 骨盤水平保持の主役',
+    where:'腸骨外面 → 大腿骨大転子',
+    action:'股関節外転・前部:内旋 / 後部:外旋 / 全体:片脚支持時の骨盤水平保持',
+    baseball:'着地時のニーイン（膝内側への動き）を防ぐ。片脚支持の安定を担い投球・走塁すべての土台。弱いとACL断裂リスクが急増。',
+    injury:'中臀筋弱化→ニーイン→ACL断裂リスク急増。片脚着地時の骨盤不安定性→膝・足首障害連鎖。',
+    exercises:['クラムシェル（毎日）','サイドバンドウォーク','シングルレッグスクワット','ヒップスラスト片脚']
+  },
+  adductors: {
+    emoji:'🦵', name:'内転筋群（ないてんきんぐん）', sub:'大・長・短内転筋・薄筋・恥骨筋の5筋 | ヒップファーストの推進力',
+    where:'恥骨・坐骨 → 大腿骨内側面〜脛骨内側（薄筋）',
+    action:'股関節内転・屈曲補助（前部）・伸展補助（後部）',
+    baseball:'打撃のヒップファーストで骨盤回旋を補助。踏み込み足の「壁作り」で等尺性収縮。内転筋が弱いとヒップファーストができない・前足が流れる。',
+    injury:'鼡径部肉離れ（野球で高頻度）。急激な開脚動作や全力スプリントのターンで発生。コペンハーゲンアダクションで予防。',
+    exercises:['コペンハーゲンアダクション（肉離れ予防・週2〜3）','ワイドスクワット','横ランジ','アダクターマシン']
+  },
+  multifidus: {
+    emoji:'🏛️', name:'多裂筋（たれつきん）', sub:'椎骨を節単位で固定する精密な安定装置',
+    where:'仙骨〜頸椎の各椎骨乳頭突起 → 2〜4椎骨上位の棘突起',
+    action:'椎骨の節単位安定・腰椎伸展補助',
+    baseball:'脊柱起立筋が大きな動きを担うのに対し、多裂筋は椎骨のミリ単位のズレを防ぐ精密安定装置。腰痛の既往者は必ず萎縮している。腰痛再発防止の最重要筋。',
+    injury:'急性腰痛後に反射的に萎縮し痛みが消えても戻らないことが多い（慢性腰痛の主原因）。',
+    exercises:['バードドッグ（最重要）','デッドリフト（軽・ニュートラルスパイン）','スーパーマン','マッキンゼー法エクサ']
+  },
+  ql: {
+    emoji:'📐', name:'腰方形筋（こしほうけいきん）', sub:'最強の側屈筋 | 高校球児の片側腰痛の主犯',
+    where:'腸骨稜・腸腰靭帯 → 第12肋骨・腰椎横突起（L1〜L4）',
+    action:'体幹側屈（最強）・第12肋骨固定・骨盤挙上',
+    baseball:'投球側のQLが毎回の投球で収縮し過緊張→腸骨を上に引き上げ機能的脚長差→骨盤傾き→腰椎・股関節への慢性ストレス。高校球児の片側腰痛の最多原因。',
+    injury:'腰方形筋性腰痛（片側の腰の張り・鈍痛）。投球側に多い。放置すると慢性化しやすい。',
+    exercises:['QLストレッチ（毎日）','サイドプランク','フォームローラー（脇腹）','ラテラルウォーク']
+  },
+  deephip: {
+    emoji:'🔄', name:'深層外旋6筋', sub:'梨状筋・内外閉鎖筋・上下双子筋・大腿方形筋 | 股関節の深層安定装置',
+    where:'仙骨・閉鎖孔・坐骨 → 大腿骨大転子',
+    action:'股関節外旋（全筋共通）・外転補助',
+    baseball:'投球軸足の外旋固定・打撃後ろ足の骨盤回転起点。深層外旋6筋が外旋位を固定することで「溜め」が生まれ爆発力が増幅される。',
+    injury:'梨状筋症候群（坐骨神経の圧迫→偽の坐骨神経痛）。お尻の奥の鈍痛・脚への放散痛が特徴。',
+    exercises:['ピジョンポーズ（毎日）','90/90ストレッチ','クラムシェル外旋強調','ヒップサークル']
   }
 };
 
