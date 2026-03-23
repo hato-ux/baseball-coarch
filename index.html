@@ -806,6 +806,78 @@ header{
   .tab-btn{padding:5px 9px;font-size:10px;}
   .mdict-ex-grid{grid-template-columns:1fr !important;}
 }
+
+/* ===== GLOBAL MOBILE IMPROVEMENTS ===== */
+/* テキストの折り返しとオーバーフローを防ぐ */
+* { box-sizing: border-box; }
+body { overflow-x: hidden; }
+.content { overflow-x: hidden; }
+
+/* section内のgridsをモバイルで1カラムに（style属性指定のgridも対応） */
+@media(max-width:640px) {
+  /* ヒーロー内の横並びカードをwrap */
+  .hero > div { flex-wrap: wrap !important; }
+  
+  /* テーブルラッパーが既にある場合も対応 */
+  table { min-width: 0 !important; width: 100%; }
+  
+  /* info-box内のgrid */
+  .info-box { overflow-x: hidden; }
+  
+  /* トップページカードグリッド */
+  .top-card-grid { grid-template-columns: 1fr 1fr !important; }
+  .top-card-icon { font-size: 22px; }
+  .top-card-title { font-size: 12px; }
+  .top-card-desc { font-size: 10px; }
+  .top-hero-title { font-size: 28px !important; }
+  .top-hero-sub { font-size: 11px; }
+  .top-feature-row { grid-template-columns: 1fr !important; }
+  
+  /* キネティックチェーンをスクロール可能に */
+  .kinetic-chain { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  
+  /* ヒーロー内のstatsをwrap */
+  .top-hero-stats { gap: 14px !important; }
+  .top-stat-num { font-size: 22px !important; }
+  
+  /* SVGをレスポンシブに */
+  svg { max-width: 100% !important; height: auto !important; }
+  
+  /* phase-timelineのpaddingを縮小 */
+  .phase-timeline { padding-left: 20px !important; }
+  .pt-content { padding: 10px 12px !important; }
+  
+  /* domino stepを読みやすく */
+  .domino-step { font-size: 11px !important; padding: 9px 12px !important; }
+  
+  /* mdict サイドバーをコンパクトに */
+  .mdict-btn { font-size: 10px !important; padding: 7px 11px !important; }
+  
+  /* supp-card, std-card テキスト */
+  .std-card .std-note { font-size: 11px !important; }
+  .supp-card { padding: 14px !important; }
+  .supp-desc { font-size: 11px !important; }
+  
+  /* meal-card */
+  .meal-items li { font-size: 11px !important; }
+  .meal-kcal { font-size: 22px !important; }
+  
+  /* data-table を横スクロール対応（JSでwrapするが念のためCSS側でも） */
+  .data-table-outer { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* pt-muscle-tags */
+  .pt-muscles { flex-wrap: wrap !important; gap: 4px !important; }
+  .pt-muscle-tag { font-size: 9px !important; padding: 2px 6px !important; }
+}
+
+@media(max-width:380px) {
+  .top-card-grid { grid-template-columns: 1fr 1fr !important; }
+  .top-card { padding: 12px 10px !important; }
+  .top-card-icon { font-size: 20px !important; }
+  .top-card-desc { display: none; } /* 極小画面では説明文を非表示 */
+  .hero { padding: 18px 14px !important; }
+  .section { padding: 12px 10px !important; }
+}
 </style>
 </head>
 <body>
@@ -903,19 +975,19 @@ header{
     <!-- 🔥 今すぐ見てほしい -->
     <div class="top-section-title">🔥 まずここから</div>
     <div class="top-feature-row">
-      <div class="top-feature" onclick="switchPage('anatomy', document.querySelector('[onclick*=anatomy]'))">
+      <div class="top-feature" onclick="switchPage('anatomy', null)">
         <div class="top-feature-title">🦴 筋肉・解剖学 — 運動生理学の土台</div>
         <div class="top-feature-desc">神経適応・収縮様式・キネティックチェーン。「なぜ練習するほど上手くなるのか」の答えがここにある。</div>
       </div>
-      <div class="top-feature" onclick="switchPage('actions', document.querySelector('[onclick*=actions]'))">
+      <div class="top-feature" onclick="switchPage('actions', null)">
         <div class="top-feature-title">⚾ 動作分析 — 投球・打撃・走・跳を解剖</div>
         <div class="top-feature-desc">フェーズごとの筋肉・コーチングポイント・よくある問題をSVG図解で解説。</div>
       </div>
-      <div class="top-feature" onclick="switchPage('elbow', document.querySelector('[onclick*=elbow]'))">
+      <div class="top-feature" onclick="switchPage('elbow', null)">
         <div class="top-feature-title">🦾 肘の故障 — UCL・トミージョン・PRP</div>
         <div class="top-feature-desc">投手必読。損傷のメカニズムから手術・再生医療・投球復帰プログラムまで。</div>
       </div>
-      <div class="top-feature" onclick="switchPage('mental', document.querySelector('[onclick*=mental]'))">
+      <div class="top-feature" onclick="switchPage('mental', null)">
         <div class="top-feature-title">🧠 メンタル — 脳科学でパフォーマンスを上げる</div>
         <div class="top-feature-desc">扁桃体・チョーキング・習慣ループ・イメトレの科学。根性論ではない実践的な方法。</div>
       </div>
@@ -927,31 +999,31 @@ header{
     <!-- 体の仕組み -->
     <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1.5px;margin-bottom:10px;">🔬 BODY SCIENCE — 体の仕組みを理解する</div>
     <div class="top-card-grid" style="margin-bottom:20px;">
-      <div class="top-card" onclick="switchPage('anatomy', document.querySelector('[onclick*=anatomy]'))">
+      <div class="top-card" onclick="switchPage('anatomy', null)">
         <span class="top-card-icon">🦴</span>
         <div class="top-card-title">筋肉・解剖学</div>
         <div class="top-card-desc">運動生理学の三大原理・速筋遅筋・キネティックチェーン・起始停止</div>
         <span class="top-card-tag tag-key">基礎必修</span>
       </div>
-      <div class="top-card" onclick="switchPage('muscdict', document.querySelector('[onclick*=muscdict]'))">
+      <div class="top-card" onclick="switchPage('muscdict', null)">
         <span class="top-card-icon">💪</span>
         <div class="top-card-title">筋肉図鑑</div>
         <div class="top-card-desc">22筋肉を完全解剖。野球での役割・弱化のリスク・強化エクサを網羅</div>
         <span class="top-card-tag tag-popular">詳細充実</span>
       </div>
-      <div class="top-card" onclick="switchPage('bodymap', document.querySelector('[onclick*=bodymap]'))">
+      <div class="top-card" onclick="switchPage('bodymap', null)">
         <span class="top-card-icon">🗺️</span>
         <div class="top-card-title">人体マップ</div>
         <div class="top-card-desc">インタラクティブSVG。タップして22筋肉の詳細を確認</div>
         <span class="top-card-tag tag-popular">タップで確認</span>
       </div>
-      <div class="top-card" onclick="switchPage('joints', document.querySelector('[onclick*=joints]'))">
+      <div class="top-card" onclick="switchPage('joints', null)">
         <span class="top-card-icon">🔗</span>
         <div class="top-card-title">関節の動き</div>
         <div class="top-card-desc">肩甲骨・股関節の6方向の動き・可動域・野球との関係を詳解</div>
         <span class="top-card-tag tag-key">投手必読</span>
       </div>
-      <div class="top-card" onclick="switchPage('trunk', document.querySelector('[onclick*=trunk]'))">
+      <div class="top-card" onclick="switchPage('trunk', null)">
         <span class="top-card-icon">🔩</span>
         <div class="top-card-title">体幹解剖</div>
         <div class="top-card-desc">インナー・アウター・6方向の動き・投打への連動を5サブタブで解説</div>
@@ -962,13 +1034,13 @@ header{
     <!-- 動作分析 -->
     <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1.5px;margin-bottom:10px;">⚾ PERFORMANCE — 動作と競技力</div>
     <div class="top-card-grid" style="margin-bottom:20px;">
-      <div class="top-card" onclick="switchPage('actions', document.querySelector('[onclick*=actions]'))">
+      <div class="top-card" onclick="switchPage('actions', null)">
         <span class="top-card-icon">⚾</span>
         <div class="top-card-title">動作分析</div>
         <div class="top-card-desc">投球・打撃・走動作・跳躍をSVG図解＋フェーズ別に完全解剖</div>
         <span class="top-card-tag tag-popular">SVG図解あり</span>
       </div>
-      <div class="top-card" onclick="switchPage('standards', document.querySelector('[onclick*=standards]'))">
+      <div class="top-card" onclick="switchPage('standards', null)">
         <span class="top-card-icon">📊</span>
         <div class="top-card-title">プロ基準</div>
         <div class="top-card-desc">体組成・筋力・スピード・投打能力の目標数値。ポジション別・学年別</div>
@@ -979,25 +1051,25 @@ header{
     <!-- 身体づくり -->
     <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1.5px;margin-bottom:10px;">💪 BODY BUILDING — 身体づくり</div>
     <div class="top-card-grid" style="margin-bottom:20px;">
-      <div class="top-card" onclick="switchPage('nutrition', document.querySelector('[onclick*=nutrition]'))">
+      <div class="top-card" onclick="switchPage('nutrition', null)">
         <span class="top-card-icon">🥩</span>
         <div class="top-card-title">栄養戦略</div>
         <div class="top-card-desc">4,800kcal食事プラン・三大栄養素・サプリ・水分補給の完全ガイド</div>
         <span class="top-card-tag tag-key">食べて大きくなる</span>
       </div>
-      <div class="top-card" onclick="switchPage('sleep', document.querySelector('[onclick*=sleep]'))">
+      <div class="top-card" onclick="switchPage('sleep', null)">
         <span class="top-card-icon">🌙</span>
         <div class="top-card-title">睡眠</div>
         <div class="top-card-desc">GH分泌・睡眠ステージ・競技パフォーマンスへの影響・改善習慣を完全解説</div>
         <span class="top-card-tag tag-popular">成長の鍵</span>
       </div>
-      <div class="top-card" onclick="switchPage('height', document.querySelector('[onclick*=height]'))">
+      <div class="top-card" onclick="switchPage('height', null)">
         <span class="top-card-icon">📏</span>
         <div class="top-card-title">身長を伸ばす</div>
         <div class="top-card-desc">成長ホルモン最大化・骨の仕組み・栄養・都市伝説の真実</div>
         <span class="top-card-tag tag-new">NEW</span>
       </div>
-      <div class="top-card" onclick="switchPage('fatloss', document.querySelector('[onclick*=fatloss]'))">
+      <div class="top-card" onclick="switchPage('fatloss', null)">
         <span class="top-card-icon">🔥</span>
         <div class="top-card-title">脂肪削減</div>
         <div class="top-card-desc">筋肉を守りながら脂肪を落とす正しい方法・LISS vs HIIT</div>
@@ -1008,13 +1080,13 @@ header{
     <!-- コンディショニング -->
     <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1.5px;margin-bottom:10px;">🛡️ CONDITIONING — コンディショニングと予防</div>
     <div class="top-card-grid" style="margin-bottom:20px;">
-      <div class="top-card" onclick="switchPage('care', document.querySelector('[onclick*=care]'))">
+      <div class="top-card" onclick="switchPage('care', null)">
         <span class="top-card-icon">🛁</span>
         <div class="top-card-title">体ケア</div>
         <div class="top-card-desc">体ケアの本質・日々のルーティン・ケガ予防・開脚の解剖学</div>
         <span class="top-card-tag tag-key">ケガゼロへ</span>
       </div>
-      <div class="top-card" onclick="switchPage('elbow', document.querySelector('[onclick*=elbow]'))">
+      <div class="top-card" onclick="switchPage('elbow', null)">
         <span class="top-card-icon">🦾</span>
         <div class="top-card-title">肘の故障</div>
         <div class="top-card-desc">UCL損傷・トミージョン手術・PRP注射・投球復帰プログラム</div>
@@ -1025,7 +1097,7 @@ header{
     <!-- メンタル -->
     <div style="font-size:10px;font-weight:700;color:var(--gray);letter-spacing:1.5px;margin-bottom:10px;">🧠 MENTAL — メンタルと脳科学</div>
     <div class="top-card-grid" style="margin-bottom:28px;">
-      <div class="top-card" onclick="switchPage('mental', document.querySelector('[onclick*=mental]'))">
+      <div class="top-card" onclick="switchPage('mental', null)">
         <span class="top-card-icon">🧠</span>
         <div class="top-card-title">メンタル</div>
         <div class="top-card-desc">脳の部位・プレッシャー制御・習慣設計・スランプ対処・イメトレ</div>
@@ -1050,7 +1122,7 @@ header{
     <button class="anat-sub-btn" onclick="switchAnatSub('structure',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">🔬 筋肉の構造</button>
     <button class="anat-sub-btn" onclick="switchAnatSub('hypertrophy',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">📈 筋肥大の科学</button>
     <button class="anat-sub-btn" onclick="switchAnatSub('energy',this)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">🔋 エネルギー代謝</button>
-    <button class="anat-sub-btn" onclick="switchPage('muscdict',document.querySelector('[onclick*=muscdict]'))" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">💪 筋肉図鑑→</button>
+    <button class="anat-sub-btn" onclick="switchPage('muscdict', null)" style="flex-shrink:0;padding:0 16px;height:46px;border:none;background:transparent;color:var(--gray);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap;">💪 筋肉図鑑→</button>
   </div>
 
   <div class="content" style="padding-top:0;">
@@ -9712,23 +9784,40 @@ header{
 <!-- ============================================================ -->
 <script>
 // ===== PAGE SWITCH =====
-// mobile table scroll
+// mobile table scroll - wrap all data-tables
 (function(){
   document.querySelectorAll('.data-table').forEach(function(t){
-    var p=t.parentElement;
-    if(p&&p.tagName!=='DIV'||!p.style.overflowX){
-      var w=document.createElement('div');
-      w.style.cssText='overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;';
-      p.insertBefore(w,t);w.appendChild(t);
-    }
+    // 既にwrapされていたらスキップ
+    if(t.parentElement && t.parentElement.classList.contains('data-table-outer')) return;
+    var w = document.createElement('div');
+    w.className = 'data-table-outer';
+    w.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;-ms-overflow-style:-ms-autohiding-scrollbar;';
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
   });
 })();
 
 function switchPage(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  btn.classList.add('active');
+  const page = document.getElementById('page-' + id);
+  if (page) page.classList.add('active');
+  // btnはnullの場合もある（トップページのカードから呼ぶ場合など）
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    // タブバーの対応ボタンを自動でアクティブに
+    const tabBtn = document.querySelector('.tab-btn[onclick*="switchPage(\'"+id+"\',"]') || 
+                   document.querySelector('.tab-btn[onclick*='switchPage("'+id+'"']');
+    if (tabBtn) tabBtn.classList.add('active');
+    // より確実な方法: onclickにidが含まれるタブボタンを検索
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      if (b.getAttribute('onclick') && b.getAttribute('onclick').includes("'"+id+"'")) {
+        b.classList.add('active');
+      }
+    });
+  }
+  window.scrollTo(0, 0);
 }
 
 // ===== PHASE SWITCH =====
