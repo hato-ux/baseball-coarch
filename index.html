@@ -32,6 +32,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.97);backdrop
 .content{max-width:1100px;margin:0 auto;padding:28px 20px 80px;}
 .page{display:none;}
 .page.active{display:block;animation:fadeIn 0.3s ease;}
+.page, .content { background: var(--navy); }
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 /* HERO */
@@ -957,6 +958,11 @@ body { overflow-x: hidden; }
     .top-card-grid{grid-template-columns:1fr 1fr;}
     .top-hero{padding:24px 16px;}
   }
+  /* トップページ背景を確実にネイビーに */
+  #page-top { background: var(--navy); }
+  #page-top .content { background: var(--navy); }
+  #page-top .top-section-title + div,
+  #page-top .top-section-title ~ div { background: transparent; }
   </style>
 
   <div class="content">
@@ -9840,9 +9846,9 @@ function switchTrunkSub(id, btn) {
 
 // ── 関節サブタブ ──
 function switchJointSub(id, btn) {
-  document.querySelectorAll('.jt-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.joint-sub').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('.jt-btn').forEach(function(b){ b.classList.remove('active'); });
-  var el = document.getElementById('jt-' + id);
+  var el = document.getElementById('jsub-' + id);
   if (el) el.classList.add('active');
   if (btn) btn.classList.add('active');
 }
